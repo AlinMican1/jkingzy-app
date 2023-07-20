@@ -1,0 +1,44 @@
+.video-container{
+    position: absolute;
+    width: 100%;
+    height: 100vh; 
+    z-index: -100;
+    overflow: hidden;
+    top: 0;
+}
+video{
+    width: 100%;
+    height: 600px;
+    object-fit: fill;
+   
+}
+.video-title{
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; 
+    height: 300px; 
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;   
+} 
+
+ .video-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.5);
+} 
+
+
+ @media screen and (max-width : 700px){
+    .video-container{
+        width: 100%;
+        object-fit: contain;
+    }
+} 

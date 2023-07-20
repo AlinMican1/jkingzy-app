@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&family=Poppins:wght@600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+button{
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+}
+
+.default{
+    background-color: transparent;
+    width: 120px;
+    height: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    
+    
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.social-button{
+    background-color: transparent;
+    width: 150px;
+    height: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid black;
+    transition: .2s;
+   
+}
+
+.social-button:hover{
+    background-color: black;
+    color: white;
+    transition: .2s;
+   
+}
+
+.default:hover{
+    background-color: #dde6fe;
+    opacity: 1;
+    border: solid thin #0845dd;
+} 
+
+.welcome-button{
+    width: 600px;
+    height: 375px;
+    background-color: #0aff9d00;
+    color: white;
+    transition-duration: 0.2s;
+}
+.welcome-button:hover{
+    padding-top: 10px;
+    transition-duration: 0.2s;
+    color: #4278db;
+}
+
+.welcome-button:after{
+    content: '✈';
+    position: relative;
+    opacity: 0;  
+    top: 0px;
+    right: -20px;
+    transition: 0.5s;
+    color: #5733cb;
+    font-size: 75px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    
+}
+
+.welcome-button:hover:after {
+    opacity: 1;
+    right: 10px;
+    
+  }
+
