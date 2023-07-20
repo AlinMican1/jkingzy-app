@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.container-video{
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.container-video .card{
+    position: relative;
+    max-width: 450;
+    background-color: antiquewhite;
+    padding: 15px;
+    display: flex;
+}
+
+.container-video .card .imgBx{
+    max-width: 150px;
+    flex: 0 0 150px
+}
+
+.container-video .card .imgBx img{
+    max-width: 100%;
+    
+}
+.container-video .card .content{
+    margin-left: 20px;
+}
+.container-video .card .content h1{
+    font-size: 10px;
+}
+.container-video .card .content p{
+    font-size: 10px;
+}

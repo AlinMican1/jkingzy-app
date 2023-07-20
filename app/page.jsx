@@ -5,11 +5,12 @@ import VideoBg from '@/components/UI/organism/videoBg'
 import NavBar from '@/components/UI/molecule/navBar'
 import ContentBox from '@/components/UI/molecule/contentBox'
 import '../styles/globals.css'
+import YoutubeVids from '@/components/UI/atom/youtubeVids'
 
 export default function Home() {
   return (
     <div >
-        <VideoBg />
+        <YoutubeVids/>
         
     </div>
     
