@@ -56,8 +56,9 @@ button{
     background-color: #0aff9d00;
     color: white;
     transition-duration: 0.2s;
+    cursor: auto;
 }
-.welcome-button:hover{
+/* .welcome-button:hover{
     padding-top: 10px;
     transition-duration: 0.2s;
     color: #DDE6FE;
@@ -81,5 +82,14 @@ button{
     opacity: 1;
     right: 10px;
     
-  }
+  } */
 
+  @media screen and (max-width : 740px){
+    .default {
+       display: none;
+      
+    }
+    .welcome-button{
+        display: none;
+    }
+}

@@ -1,84 +1,71 @@
 'use client'
 import { useEffect, useState } from "react"
 import './youtubeVids.css'
-
-
-
+import test from '../../../../public/test.jpg'
+import Image from "next/image"
+import Link from "next/link"
+import {motion} from "framer-motion"
+import { useInView } from "react-intersection-observer"
+import { useAnimation } from "framer-motion"
+import Reveal from "@/components/animations/reveal"
 
 const MaxResult = 5
 var fetchURL = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${process.env.NEXT_PUBLIC_CHANNEL_ID}&maxResults=${MaxResult}&order=date&key=${process.env.NEXT_PUBLIC_YOUTUBE_API}`
-
+console.log(fetchURL)
 export const YoutubeVids = () =>{
+    
+    
     const [allVideos, setAllVideos] = useState([])
     useEffect(()=>{
+        
         fetch(fetchURL).then((response)=> response.json()).then((resJson)=>{
             const result = resJson.items.map(doc=>({
                 ...doc,
-                VideoLink: "https://www/youtube.com/embed/"+doc.id.videoId
+                VideoLink: "https://www.youtube.com/watch?v="+doc.id.videoId
             }));
             setAllVideos(result)
         }) .catch((error) => {
             console.error('Error fetching data:', error);
           });
     },[])
-    console.log(allVideos)
     return (
-
-        <div className="container">
+           <div className="card-container">
+                    {allVideos.length > 0 && (
+                    <Link className="custom-link" href={allVideos[0].VideoLink}>
+                        <Reveal>
+                        <div className="card">  
+                            
+                            <img className="thumbnail" src={allVideos[0].snippet.thumbnails.high.url} alt={allVideos[0].snippet.title} />
+                            
+                            <div className="content">
+                                <h2 className="title">{allVideos[0].snippet.title}</h2>
+                            </div>
+                           
+                        </div>
+                        </Reveal>  
+                    </Link>
+            )}  
+                {allVideos.slice(1).map((item)=>{
+                return(
+                    <Link className="custom-link" href={item.VideoLink} key={item.id.videoId}>
+                        <Reveal>
+                            <div className="card-all">
+                                <img className="thumbnail-all" src={item.snippet.thumbnails.high.url}/>
+                                <div className="content">
+                                    <h2 className="title-all">{item.snippet.title.substring(0, 40)}...</h2>
+                                </div>
+                            </div>
+                        </Reveal>
+                    </Link>   
+                )
+            })}
+            </div>
+        
             
-        {/* Render the first video separately */}
-        {allVideos.length > 0 && (
-            <div className="container-video">
-            <div className="card">
-                <div className="imgBx">
-                <img src={allVideos[0].snippet.thumbnails.high.url} alt={allVideos[0].snippet.title} />
-                </div>
-                <div className="content">
-                    <h1>{allVideos[0].snippet.title}</h1>
-                    <p>asdfgasgadsgadgasdgasgasasg</p>
-                </div>
-            </div>
-            <div className="card">
-                <div className="imgBx">
-                <img src={allVideos[1].snippet.thumbnails.high.url} alt={allVideos[0].snippet.title} />
-                </div>
-                <div className="content">
-                    <h1>{allVideos[1].snippet.title}</h1>
-                    <p>asdfgasgadsgadgasdgasgasasg</p>
-                </div>
-            </div>
-            <div className="card">
-                <div className="imgBx">
-                <img src={allVideos[2].snippet.thumbnails.high.url} alt={allVideos[0].snippet.title} />
-                </div>
-                <div className="content">
-                    <h1>{allVideos[2].snippet.title}</h1>
-                    <p>asdfgasgadsgadgasdgasgasasg</p>
-                </div>
-            </div>
-            <div className="card">
-                <div className="imgBx">
-                <img src={allVideos[3].snippet.thumbnails.high.url} alt={allVideos[0].snippet.title} />
-                </div>
-                <div className="content">
-                    <h1>{allVideos[3].snippet.title}</h1>
-                    <p>asdfgasgadsgadgasdgasgasasg</p>
-                </div>
-            </div>
-            <div className="card">
-                <div className="imgBx">
-                <img src={allVideos[4].snippet.thumbnails.high.url} alt={allVideos[0].snippet.title} />
-                </div>
-                <div className="content">
-                    <h1>{allVideos[4].snippet.title}</h1>
-                    <p>asdfgasgadsgadgasdgasgasasg</p>
-                </div>
-            </div> 
-
-            </div>
+        
             
-        )}
-            </div>
+            
+       
        
         )
         {/* <div className="container">
