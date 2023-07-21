@@ -15,7 +15,6 @@ button{
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
     
-    
     opacity: 1;
     display: flex;
     justify-content: center;
@@ -47,9 +46,8 @@ button{
 }
 
 .default:hover{
-    background-color: #dde6fe;
-    opacity: 1;
-    border: solid thin #0845dd;
+    transform: scale(1.1);
+   
 } 
 
 .welcome-button{
@@ -58,11 +56,12 @@ button{
     background-color: #0aff9d00;
     color: white;
     transition-duration: 0.2s;
+    cursor: auto;
 }
-.welcome-button:hover{
+/* .welcome-button:hover{
     padding-top: 10px;
     transition-duration: 0.2s;
-    color: #4278db;
+    color: #DDE6FE;
 }
 
 .welcome-button:after{
@@ -83,5 +82,14 @@ button{
     opacity: 1;
     right: 10px;
     
-  }
+  } */
 
+  @media screen and (max-width : 740px){
+    .default {
+       display: none;
+      
+    }
+    .welcome-button{
+        display: none;
+    }
+}
