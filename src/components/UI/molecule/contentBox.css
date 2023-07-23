@@ -15,6 +15,7 @@
     height: 50px;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 .default-box h1{
     font-size: 50px;
@@ -24,6 +25,7 @@
 
 .socials-icon-youtube{
     color: black;
+    font-size: 50px;
 }
 .socials-icon-youtube:hover{
     cursor: pointer;
@@ -33,6 +35,7 @@
 
 .socials-icon-tiktok{
     color: black;
+    font-size: 50px;
 }
 .socials-icon-tiktok:hover{
     cursor: pointer;
@@ -41,6 +44,7 @@
 }
 .socials-icon-instagram{
     color: black;
+    font-size: 50px;
 }
 .socials-icon-instagram:hover{
     cursor: pointer;

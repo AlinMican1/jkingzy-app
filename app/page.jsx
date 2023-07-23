@@ -8,8 +8,12 @@ import ContentBox from '@/components/UI/molecule/contentBox'
 import '../styles/globals.css'
 import YoutubeVids from '@/components/UI/molecule/youtubeVids'
 import { useRef } from 'react'
+import { motion } from 'framer-motion'
 
 export default function Home() {
+  
+  
+  
   const VideosSection = useRef(null)
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -25,10 +29,13 @@ export default function Home() {
         <VideoBg />
         
         </div>
-      <div ref={VideosSection} id='recent-videos'>
+      <div id='recent-videos'>
         <h1 className='recent-videos-title'>Recent Videos</h1>
         <p className='recent-videos-description'>adskjgbaskdjgbakjsgdbajksgbkjasgd</p>
-        <YoutubeVids/>
+        {/* <YoutubeVids/> */}
+      </div>
+      <div id='content-box-place'>
+        <ContentBox />
       </div>
        
         
