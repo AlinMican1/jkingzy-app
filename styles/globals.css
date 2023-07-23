@@ -123,9 +123,10 @@ a {
 }
 #recent-videos{
   width: 100%;
-  height: auto; 
+  height:auto; 
+  margin-top:160px;
   
-  margin-top: 30px;
+  
 }
 
 #content-box-place{

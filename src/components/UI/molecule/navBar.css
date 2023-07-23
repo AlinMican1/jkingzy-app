@@ -1,20 +1,25 @@
-
-.nav-container {
-    border-top: 50px solid #ffffff; 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&family=Poppins:wght@600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+ /* .nav-container {
+    border-top: 50px solid #ffffff ; 
     border-right: 25px solid transparent;
     border-left: 25px solid transparent; 
-    height: 0;
+    height: 0px; 
     width: 650px;
-    margin: auto;
+    
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    z-index: 99;
+    z-index: 99; 
+    position: fixed;
+    
+    
+    left: 50%;
+    transform: translate(-50%);
+    
    
-    
-    
-}
-.nav-container2 {
+} */
+/* .nav-container2 {
     border-top: 51px solid #060606; 
     border-right: 25px solid transparent;
     border-left: 25px solid transparent; 
@@ -25,23 +30,23 @@
     top: 0;
     
     
-}
+}  */
 
-.line{
+ .line{
     position: absolute;
     width: 100%;
     height: 35px;
-    z-index: -2;
+    z-index: -2; 
     /* background-color: #ffffff; */
     background-image: url("../../../../public/trianglify-lowres.png");
     top: -5px;
     outline: solid black 1px;
     
-}
+} 
 
 
 
-Link{
+/* Link{
     text-decoration: none;
 }
 
@@ -51,7 +56,7 @@ a{
 .button-wrapper {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 @media screen and (max-width : 740px){
@@ -81,4 +86,63 @@ a{
         align-items: center;
         gap: 0px;
     }
+}  */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background: #eee;
+    z-index: 9999;
+    transition: all 300ms ease-in-out;
+    height: 30px;
+    border-bottom: 1px solid #000;
+    
+}
+header .inner-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 100%; 
+    
+}
+header nav {
+    display: flex; /* Make the navigation items a flex container */
+    align-items: center; /* Center the buttons vertically */
+    
+}
+
+header nav a {
+     /* Adjust the spacing between buttons as needed */
+    text-decoration: none;
+   
+    color: #000; /* Adjust the color of the button text */
+    font-family: 'Poppins';
+    position: relative; /* Add position relative to the anchor element */
+    display: inline-block;
+    
+}
+
+
+.scroll-down header {
+    transform: translate3d(0, -100%, 0);
+}
+.scroll-up header {
+    filter: drop-shadow(0 -10px 20px #aaa);
+}
+.menu-is-open {
+    overflow: hidden;
+}
+.menu-is-open header {
+    filter: none;
+}
+
+.active{
+    font-size: larger;
+    color: rgb(0, 0, 0);
 }

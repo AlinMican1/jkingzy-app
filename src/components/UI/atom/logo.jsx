@@ -6,7 +6,7 @@ import logo from '../../../../public/jkingzyLogo.jpg'
 const Logo = () => {
   return (
     <>
-    <div className='logo-container-outline'/>
+   
     <div className="logo-container">
       
     <Image  className='logo-container' src={logo} alt="Logo"/>
