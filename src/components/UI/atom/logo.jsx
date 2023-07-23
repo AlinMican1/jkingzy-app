@@ -9,7 +9,7 @@ const Logo = () => {
     <div className='logo-container-outline'/>
     <div className="logo-container">
       
-    <Image className='logo-container' src={logo} alt="Logo"/>
+    <Image  className='logo-container' src={logo} alt="Logo"/>
     </div>
     </>
   )
