@@ -14,7 +14,9 @@ const VideoBg = () => {
             <div className='video-overlay' />
             
             <div className='video-title'>
-            <Button btnTexth1={"Welcome to"} btnTextp={"KingzAce's hub."} btnVariant={'welcome-button'}/>
+            <h1>Welcome to <br/> KingzAce's hub </h1>
+            
+            
              
             </div> 
             

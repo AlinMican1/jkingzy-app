@@ -8,7 +8,7 @@ import {motion} from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { useAnimation } from "framer-motion"
 import Reveal from "@/components/animations/reveal"
-import plane1 from '../../../assets/plane1.jpg'
+import playBtn from '../../../assets/play-button.png'
 
 const MaxResult = 5
 var fetchURL = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${process.env.NEXT_PUBLIC_CHANNEL_ID}&maxResults=${MaxResult}&order=date&key=${process.env.NEXT_PUBLIC_YOUTUBE_API}`
@@ -48,7 +48,9 @@ export const YoutubeVids = () =>{
                      
                 <div className="vid-wrapper" >
                 <img className="video-placement" src={allVideos[0].snippet.thumbnails.high.url} alt={allVideos[0].snippet.title} />
+                
                 <div className="video-description" >
+                    
                     <p>{allVideos[0].snippet.title}</p>
                 </div>
                 <div className="video-owner">

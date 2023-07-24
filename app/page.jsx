@@ -9,8 +9,7 @@ import '../styles/globals.css'
 import YoutubeVids from '@/components/UI/molecule/youtubeVids'
 import { useRef, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import Front from '@/assets/front.png'
-import Back from '@/assets/back.jpg'
+
 
 export default function Home() {
   const [offsetY, setOffsetY] = useState(0);
@@ -38,12 +37,16 @@ export default function Home() {
         <VideoBg />
         
         </div>
-      <div id='recent-videos' style={{ transform: `translateY(-${offsetY * 0.2}px)` }}>
+      <div id='background-recent-videos'>
+      <div id='recent-videos' >
         
         <h1 className='recent-videos-title'>Recent Videos</h1>
       
         <p className='recent-videos-description'>adskjgbaskdjgbakjsgdbajksgbkjasgd</p>
-         {/* <YoutubeVids/> */}
+        {/* <div id='foreground' > */}
+          {/* <YoutubeVids /> */}
+          {/* </div>  */}
+      </div>
       </div>
       <div id='content-box-place'>
         <ContentBox />
