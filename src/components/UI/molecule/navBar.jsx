@@ -5,46 +5,52 @@ import Button from '../atom/button'
 import Logo from '../atom/logo'
 import Link from 'next/link'
 import '../../../../styles/globals.css'
-import ReactDOM from 'react-dom';
-import {NavLink} from 'react-router-dom';
-
+import { useEffect } from 'react'
 
 const NavBar = () => {
+  useEffect(() => {
+    // Scroll event handling
     const body = document.body;
-let lastScroll = 0;
+    let lastScroll = 0;
 
-window.addEventListener("scroll", () => {
-	const currentScroll = window.pageYOffset;
-	if (currentScroll <= 0) {
-		body.classList.remove("scroll-up");
-		return;
-	}
+    const handleScroll = () => {
+      const currentScroll = window.pageYOffset;
 
-	if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-		body.classList.remove("scroll-up");
-		body.classList.add("scroll-down");
-	} else if (
-		currentScroll < lastScroll &&
-		body.classList.contains("scroll-down")
-	) {
-		body.classList.remove("scroll-down");
-		body.classList.add("scroll-up");
-	}
-	lastScroll = currentScroll;
-    });
+      if (currentScroll <= 0) {
+        body.classList.remove("scroll-up");
+      } else if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+        body.classList.remove("scroll-up");
+        body.classList.add("scroll-down");
+      } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+        body.classList.remove("scroll-down");
+        body.classList.add("scroll-up");
+      }
 
+      lastScroll = currentScroll;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Button click event handling
     const buttons = document.querySelectorAll(".default");
 
-// Add a click event listener to each button
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    // Remove the "active" class from all buttons
-    buttons.forEach(btn => btn.classList.remove("active"));
+    const handleClick = (event) => {
+      buttons.forEach((btn) => btn.classList.remove("active"));
+      event.target.classList.add("active");
+    };
 
-    // Add the "active" class to the clicked button
-    button.classList.add("active");
-  });
-});
+    buttons.forEach((button) => {
+      button.addEventListener("click", handleClick);
+    });
+
+    // Clean up the event listeners when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      buttons.forEach((button) => {
+        button.removeEventListener("click", handleClick);
+      });
+    };
+  }, []); 
     
     return (
     
