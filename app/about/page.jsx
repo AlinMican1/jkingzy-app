@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Parallax from '@/components/animations/parallax'
 const About = () => {
   return (
-    <div>ABOUT PAGE</div>
+    <div>
+      <Parallax />
+    </div>
   )
 }
 

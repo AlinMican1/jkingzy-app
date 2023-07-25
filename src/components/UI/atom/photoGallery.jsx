@@ -79,7 +79,7 @@ const PhotoGallery = () => {
         <div className='photo-gallery-title'>
          <p>For More<span className='span-title'> Photos.</span> <br/> 
             <Link href={"https://www.instagram.com/thekingzace/"}>
-            <FontAwesomeIcon className='socials-icon-instagram' icon={faInstagram}>
+            <FontAwesomeIcon className='socials-icon-insta' icon={faInstagram}>
         
             </FontAwesomeIcon>
             </Link>

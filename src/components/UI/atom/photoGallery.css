@@ -61,12 +61,12 @@
    
     text-align: center;
 }
-.socials-icon-instagram{
+.socials-icon-insta{
     color: black;
     font-size: 60px;
     margin-top: 20px;
 }
-.socials-icon-instagram:hover{
+.socials-icon-insta:hover{
     cursor: pointer;
     color: rgb(232, 81, 220);
     transform: scale(1.1);
@@ -120,7 +120,7 @@
     }
 }
 @media (max-width: 600px){
-    .socials-icon-instagram{
+    .socials-icon-insta{
         
         font-size: 40px;
         

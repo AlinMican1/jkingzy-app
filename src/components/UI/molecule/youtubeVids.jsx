@@ -8,7 +8,7 @@ import {motion} from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { useAnimation } from "framer-motion"
 import Reveal from "@/components/animations/reveal"
-import playBtn from '../../../assets/play-button.png'
+
 
 const MaxResult = 5
 var fetchURL = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${process.env.NEXT_PUBLIC_CHANNEL_ID}&maxResults=${MaxResult}&order=date&key=${process.env.NEXT_PUBLIC_YOUTUBE_API}`
@@ -34,7 +34,7 @@ export const YoutubeVids = () =>{
             console.error('Error fetching data:', error);
           });
     },[])
-    console.log(allVideos)
+    
     
     return (
         
