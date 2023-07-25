@@ -5,7 +5,8 @@ import Image from 'next/image'
 import './photoGallery.css'
 import Link from 'next/link'
 import { useEffect } from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faInstagram} from '@fortawesome/free-brands-svg-icons'
 
 
 const PhotoGallery = () => {
@@ -42,7 +43,7 @@ const PhotoGallery = () => {
     });
    
     return (
-   
+        <>
         <div className='gallery-wrapper'>
             <div className='gallery-item'>
                 
@@ -70,12 +71,22 @@ const PhotoGallery = () => {
                 
             </div>
             <div className='gallery-item'>
-              
+            
                 <Image className='photo-gallery-image' src={plane1} alt=''/>
-               
+                
             </div>
         </div>
-   
+        <div className='photo-gallery-title'>
+         <p>For More<span className='span-title'> Photos.</span> <br/> 
+            <Link href={"https://www.instagram.com/thekingzace/"}>
+            <FontAwesomeIcon className='socials-icon-instagram' icon={faInstagram}>
+        
+            </FontAwesomeIcon>
+            </Link>
+            </p>
+         </div>
+         </>
+       
   )
 }
 

@@ -43,9 +43,9 @@ export default function Home() {
         <h1 className='recent-videos-title'>Recent Videos</h1>
       
         <p className='recent-videos-description'>adskjgbaskdjgbakjsgdbajksgbkjasgd</p>
-        {/* <div id='foreground' > */}
-          {/* <YoutubeVids /> */}
-          {/* </div>  */}
+        <div id='foreground' > 
+          <YoutubeVids />
+          </div> 
       </div>
       </div>
       <div id='content-box-place'>
