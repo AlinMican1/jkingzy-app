@@ -14,7 +14,7 @@ const NavBar = () => {
     let lastScroll = 0;
 
     const handleScroll = () => {
-      const currentScroll = window.pageYOffset;
+      const currentScroll = window.scrollY;
 
       if (currentScroll <= 0) {
         body.classList.remove("scroll-up");

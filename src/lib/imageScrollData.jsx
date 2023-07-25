@@ -36,6 +36,8 @@ export const FlightSimPics =[
         image: plane6,
        
     },
+   
+    
     
 ];
 export const RealLifePics =[

@@ -109,8 +109,8 @@ a {
 
 .home-page{
   height: 100vh;
-  
 }
+
 #video-bg{
   width: 100%;
   height: 550px;
@@ -119,12 +119,13 @@ a {
   align-items: center;
   display: flex;
 }
+
 #recent-videos{
   width: 100%;
   height:auto; 
-  margin-top: 0px;
-  
+  margin-top: 0px; 
 }
+
 #background-recent-videos{
   width: 100%;
   height: 800px;
@@ -138,28 +139,27 @@ a {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   padding-top: 30px;
-  
 }
+
 #foreground{
-  
   background-size: cover; /* Adjust the background size as needed */
   background-repeat: no-repeat;
   display: flex;
   width: 100%;
   height:700px;
-  background-color: white;
- 
- 
 }
+
 #content-box-place{
   width: 100%;
   height: auto; 
   margin-top: 30px;
 }
+
 .custom-link{
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
+
 .custom-link:active{
   color: rgb(255, 255, 255);
 }
@@ -173,51 +173,56 @@ a {
   color:rgb(0, 0, 0);
   content:'';
   flex:1;
-  
   border-bottom: solid 2px;
   margin: auto 2.5rem;
   
 }
+
 .recent-videos-description{
   font-size: 20px;
   position: relative;
   text-align: center;
   margin-top: -75px;
+  
 }
 
 /*GALLERY PAGE*/
 .gallery-page{
-  width: 100%;
-  height: 3600px;
-  margin-top: -20px;
-  position: absolute; 
-  z-index: -100;
-  overflow-x:hidden ;
-  /* background-color: black; */
+height:100vh;
+  
 }
 
 #auto-display-photo{
   height: auto;
   width: 100%;
   
-}
+} 
+
 #favorite-pics-flightSim{
   width: 100%;
-  height: 750px; 
+  height: 800px; 
   user-select: none;
+  position: absolute;
+  overflow-x: hidden;
+ 
   
 }
 
 #favorite-pics-realLife{
   width: 100%;
-  height: 750px; 
+  height: 800px; 
   user-select: none;
+  position: absolute;
+  overflow-x: hidden;
+  margin-top: 800px;
   
 }
 #gallery-display{
   width: 100%;
   height: auto;
-  
+  margin-top: 1600px;
+ 
+  overflow: hidden;
 }
 
 .gallery-title{
@@ -254,20 +259,143 @@ body {
 
 h1{
   font-family: 'Poppins';
-  font-size: 80px;
+  font-size: 70px;
   text-align: center;
 }
 p{
   font-family: 'Poppins';
-  font-size: 60px;
+  font-size: 40px;
   
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 985px) {
+  
+  h1{
+    font-size: 65px;
+  }
+ 
+}
+
+@media (max-width: 950px) {
+  .gallery-title{
+    align-items: center;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-family: 'Poppins'; 
+  }
+  .gallery-title:before, .gallery-page:after {
+    display: none;
+  }
+  h1{
+    font-size: 7vw;
+  }
+  
   .recent-videos-title{
     display: none;
   }
   .recent-videos-description{
     display: none;
   }
+}
+
+
+@media screen and (max-width: 400px) {
+  #favorite-pics-flightSim{
+    height: 350px; 
+  }
+  #favorite-pics-realLife{
+    height: 350px; 
+    margin-top:330px;
+  }
+  #gallery-display{
+   
+    margin-top: 655px;
+   
+  }
+  p{
+    font-size: 20px;
+  }
+  
+}
+
+@media screen and (max-width: 500px) and (min-width:400px) {
+  #favorite-pics-flightSim{
+    height: 400px; 
+  }
+  #favorite-pics-realLife{
+    height: 400px; 
+    margin-top:400px;
+  }
+  #gallery-display{
+   
+    margin-top: 800px;
+   
+  }
+  p{
+    font-size: 20px;
+  }
+  
+}
+@media screen and (max-width: 600px) and (min-width:500px)  {
+  #favorite-pics-flightSim{
+    height: 500px; 
+  }
+  #favorite-pics-realLife{
+    height: 500px; 
+    margin-top:450px;
+  }
+  #gallery-display{
+   
+    margin-top: 900px;
+   
+  }
+  p{
+    font-size: 20px;
+  }
+  
+}
+
+@media screen and (max-width: 700px) and (min-width:600px)  {
+  #favorite-pics-flightSim{
+    height: 600px; 
+  }
+  #favorite-pics-realLife{
+    height: 600px; 
+    margin-top:550px;
+  }
+  #gallery-display{
+   
+    margin-top: 1100px;
+   
+  } 
+}
+
+@media screen and (max-width: 800px) and (min-width:700px)  {
+  #favorite-pics-flightSim{
+    height: 700px; 
+  }
+  #favorite-pics-realLife{
+    height: 700px; 
+    margin-top:630px;
+  }
+  #gallery-display{
+   
+    margin-top: 1250px;
+   
+  } 
+}
+@media screen and (max-width: 950px) and (min-width:800px)  {
+  #favorite-pics-flightSim{
+    height: 800px; 
+  }
+  #favorite-pics-realLife{
+    height: 800px; 
+    margin-top:700px;
+  }
+  #gallery-display{
+   
+    margin-top: 1400px;
+   
+  } 
 }

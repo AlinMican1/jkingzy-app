@@ -22,8 +22,8 @@ const Gallery = () => {
       </div> 
       <div id='gallery-display'>
       <h1 className='gallery-title'>Extra<span className='span-title-gallery'> Photos.</span></h1>
-        <PhotoGallery />
-      </div>
+         <PhotoGallery /> 
+      </div>  
     </div>
   )
 }

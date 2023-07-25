@@ -1,7 +1,6 @@
 .images-body{
     height: auto;
     width: 100vw;
-    
     margin: 0rem;
     overflow: hidden;
     
@@ -11,20 +10,21 @@
     display: flex;
     gap: 4vmin;
     position: absolute;
-    left: 20%;
+    left: 8%;
     top: 50%; transform: translate(0%,-50%);
     user-select: none;
-    margin-top: -480px;
+    margin-top: 100px;
     
 }
+
 #images-track2{
     display: flex;
     gap: 4vmin;
     position: absolute;
-    left: 20%;
+    left: 8%;
     top: 50%; transform: translate(0%,-50%);
     user-select: none;
-    margin-top: 320px;
+    margin-top: 100px;
 }
 
 .image-inside-track{
@@ -33,6 +33,7 @@
     object-fit: cover;
     object-position: 100% 50%;
     border-radius: 6px;
+    
 
 }
 .start-scroll{
@@ -49,17 +50,115 @@
     writing-mode: vertical-rl; 
     
 }
-@media screen and (max-width: 900px) {
+
+
+  @media screen and (max-width: 400px) {
     #images-track{
-       left: 30%;
-       
-    }
-    #images-track p{
-        font-size: 30px;
+        margin-top: 25px;
         
     }
-    .image-inside-track{
-        width: 60vmin;
-        height: 82vmin;
+    #images-track2{
+        margin-top: 25px;
+        
     }
+    #images-track p{
+        font-size: 20px;
+        
+    }
+    #images-track2 p{
+        font-size: 20px;
+        
+    }
+    
+  }
+
+  @media screen and (max-width: 500px) and (min-width:400px)  {
+    #images-track{
+        margin-top: 40px;
+        
+    }
+    #images-track2{
+        margin-top: 40px;
+        
+    }
+    #images-track p{
+        font-size: 20px;
+        
+    }
+    #images-track2 p{
+        font-size: 20px;
+        
+    }
+    
+  }
+
+  @media screen and (max-width: 600px) and (min-width:500px)  {
+    #images-track{
+        margin-top: 40px;
+        
+    }
+    #images-track2{
+        margin-top: 40px;
+        
+    }
+    #images-track p{
+        font-size: 20px;
+        
+    }
+    #images-track2 p{
+        font-size: 20px;
+        
+    }
+    
+  }
+  @media screen and (max-width: 700px) and (min-width:600px)  {
+    #images-track{
+        margin-top: 40px;
+        
+    }
+    #images-track2{
+        margin-top: 40px;
+        
+    }
+    #images-track p{
+        font-size: 20px;
+        
+    }
+    #images-track2 p{
+        font-size: 20px;
+        
+    }
+    
+  }
+
+  @media screen and (max-width: 800px) and (min-width:700px)  {
+    #images-track{
+        margin-top: 40px;
+        
+    }
+    #images-track2{
+        margin-top: 40px;
+        
+    }
+    #images-track p{
+        font-size: 20px;
+        
+    }
+    #images-track2 p{
+        font-size: 20px;
+        
+    }
+    
+  }
+  @media screen and (max-width: 950px) and (min-width:800px)  {
+    #images-track{
+        margin-top: 40px;
+        
+    }
+    #images-track2{
+        margin-top: 40px;
+        
+    }
+    
+    
   }
