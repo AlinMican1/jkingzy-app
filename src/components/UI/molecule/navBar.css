@@ -95,11 +95,12 @@ header {
     width: 100%;
     padding: 20px 0;
     text-align: center;
-    background: #eee;
     z-index: 9999;
     transition: all 300ms ease-in-out;
     height: 30px;
-    border-bottom: 1px solid #000;
+     
+    height: 100px;
+    
     
 }
 header .inner-flex {
@@ -120,7 +121,6 @@ header nav {
 header nav a {
      /* Adjust the spacing between buttons as needed */
     text-decoration: none;
-   
     color: #000; /* Adjust the color of the button text */
     font-family: 'Poppins';
     position: relative; /* Add position relative to the anchor element */
@@ -128,12 +128,19 @@ header nav a {
     
 }
 
-
+.active-navbar{
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.425);
+    transition:  300ms ease-in-out;
+    height: 40px;
+}
 .scroll-down header {
     transform: translate3d(0, -100%, 0);
+    
 }
 .scroll-up header {
     filter: drop-shadow(0 -10px 20px #aaa);
+    
 }
 .menu-is-open {
     overflow: hidden;
@@ -146,3 +153,4 @@ header nav a {
     font-size: larger;
     color: rgb(0, 0, 0);
 }
+

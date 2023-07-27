@@ -12,8 +12,8 @@ button{
     width: 120px;
     height: 50px;
     
-    color: rgb(52, 50, 50);
-    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
     font-family: 'Poppins', sans-serif;
     opacity: 1;
     text-transform: uppercase;
@@ -32,7 +32,7 @@ button{
     height: 2px;
     border-radius: 6px;
     background-color: rgb(0, 0, 0);
-    transition: width 0.3s ease-in-out; 
+    transition: width 0.15s ease-in-out; 
     
 }
 
