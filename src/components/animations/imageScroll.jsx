@@ -20,9 +20,9 @@ export const ImageScroll = ({imagesSwipe, scrollId}) => {
       const mouseDelta = parseFloat(track.dataset.mouseDownAt) - (e.clientX || e.touches[0].clientX);
       const maxDelta = window.innerWidth / 2;
 
-        const percentage = (mouseDelta / maxDelta) * - 80,
+        const percentage = (mouseDelta / maxDelta) * - 54,
         nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
-        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -80);
+        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), - 54);
 
         track.dataset.percentage = nextPercentage;
         track.style.transform = `translate(${nextPercentage}%, -50%)`;

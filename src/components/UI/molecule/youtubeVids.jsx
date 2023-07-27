@@ -14,13 +14,7 @@ const MaxResult = 5
 var fetchURL = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${process.env.NEXT_PUBLIC_CHANNEL_ID}&maxResults=${MaxResult}&order=date&key=${process.env.NEXT_PUBLIC_YOUTUBE_API}`
 
 export const YoutubeVids = () =>{
-    const cardAnimation={
-        offscreen:{x:'-100vw'},
-        onscreen:{x:0,
-            transition: {type:"spring", duration:3}
-        }
-    }
-    
+   
     const [allVideos, setAllVideos] = useState([])
     useEffect(()=>{
         
@@ -41,7 +35,7 @@ export const YoutubeVids = () =>{
         <div className="videoArray"  >
             
           
-            <div>
+            <div >
             
                 {allVideos.length > 0 && (
                 <Link className="custom-link" href={allVideos[0].VideoLink}>
@@ -135,47 +129,6 @@ export const YoutubeVids = () =>{
     
         )
         
-        //    <div className="card-container">
-        //             {allVideos.length > 0 && (
-        //             <Link className="custom-link" href={allVideos[0].VideoLink}>
-        //                 <Reveal>
-        //                 <div className="card">  
-                            
-        //                     <img className="thumbnail" src={allVideos[0].snippet.thumbnails.high.url} alt={allVideos[0].snippet.title} />
-                            
-        //                     <div className="content">
-        //                         <h2 className="title">{allVideos[0].snippet.title}</h2>
-        //                     </div>
-                           
-        //                 </div>
-        //                 </Reveal>  
-        //             </Link>
-        //     )}  
-        //         {allVideos.slice(1).map((item)=>{
-        //         return(
-        //             <Link className="custom-link" href={item.VideoLink} key={item.id.videoId}>
-        //                 <Reveal>
-        //                     <div className="card-all">
-        //                         <img className="thumbnail-all" src={item.snippet.thumbnails.high.url}/>
-        //                         <div className="content">
-        //                             <h2 className="title-all">{item.snippet.title.substring(0, 40)}...</h2>
-        //                         </div>
-        //                     </div>
-        //                 </Reveal>
-        //             </Link>   
-        //         )
-        //     })}
-        //     </div>
-        
-            
-        
-            
-            
-       
-       
-        // )
-      
-    
 }
 
 export default YoutubeVids

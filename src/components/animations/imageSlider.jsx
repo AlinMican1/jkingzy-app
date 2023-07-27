@@ -2,14 +2,14 @@
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import './imageSlider.css'
-
+import Plx from 'react-plx'
 const ImageSlider = ({images}) => {
     const[autoPlay,setAutoPlay] = useState(true);
     let timeOut = null
     useEffect(() =>{
         timeOut = autoPlay && setTimeout(() => {
             slideRight();
-        },3500)
+        },5000)
     })
     const[current,setCurrent] = useState(0)
     const slideRight = () =>{
@@ -20,26 +20,49 @@ const ImageSlider = ({images}) => {
         setCurrent(current === 0 ? images.length - 1 : current - 1)
     }
     return (
-    <div className='carousel' onMouseEnter={() => {setAutoPlay(false); clearTimeout(timeOut)}} onMouseLeave={() => {setAutoPlay(true);}}>
+        /* SET AUTOPLAY ON MOUSE ENTER put in the first div tag*/
+        /*onMouseEnter={() => {setAutoPlay(false); clearTimeout(timeOut)}} onMouseLeave={() => {setAutoPlay(true);}}*/
+    <div className='carousel'>
         <div className='carousel-wrapper'>
             {images.map((image, index) =>{
                 return(
-                    <div key={index} className={index== current ? "carousel-card carousel-card-active" : "carousel-card"}> 
+                    <div key={index} className={index== current ? "carousel-card carousel-card-active" : "carousel-card"}>
                         <Image className="card-image" src={image.image} alt="" />
+                        
+                        
                         <div className='card-overlay'>
                             <h2 className='card-title'>
                                 {image.title} <span className="card-miniTitle">{image.miniTitle}</span>
                             </h2>
-                            
+                            <Plx
+            parallaxData={[{
+              start: "self",
+              startOffset: 0,
+              duration: "80vh",
+              easing:"ease-in",
+              properties: [
+                {
+                    startValue:0,
+                    endValue:10,
+                    unit:"vh",
+                    property:"translateY"
+                }
+              ]
+            }
+          ]}
+            >
                             <div className='card-description-box'>
                             <p className='card-description'>
                                 {image.description}
                             </p>
                             </div>
+                            </Plx>
                         </div>
+                       
                     </div>
                 )
             })}
+             
              <div className='carousel-pagination'>
                 {images.map((_, index) =>{
                     return(
@@ -57,6 +80,7 @@ const ImageSlider = ({images}) => {
                     );
                 })}
             </div> 
+            
         </div>
         
         

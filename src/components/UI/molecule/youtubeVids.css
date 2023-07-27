@@ -168,6 +168,7 @@
   height: 100%;
   transition: .2 all;
   
+  
 }
 .vid-wrapper:hover{
   transition: .2 all;
@@ -186,10 +187,9 @@
   
 }
 .videoArray{
-  width: 70vw;
+  width: 75vw;
   margin: auto;
   margin-top: 100px;
-  
   display: grid;
   grid-gap: .5em;
   grid-template-areas: 
@@ -204,6 +204,7 @@
   border: 1px solid black;
   overflow:hidden;
   border-radius: 6px;
+  
 }
 
 .videoArray > div:first-child{
@@ -218,6 +219,7 @@
   object-fit: cover;
   transition: transform .2s ease; /* Move the transition property here */
   aspect-ratio: 3/2;
+  background-color: black;
 }
 
 
@@ -330,6 +332,8 @@
 
 @media screen and (max-width: 630px){
   .videoArray {
+    
+    width: 80vw;
     grid-template-areas:
       "video1 "
       "video2 "

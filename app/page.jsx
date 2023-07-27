@@ -9,48 +9,87 @@ import '../styles/globals.css'
 import YoutubeVids from '@/components/UI/molecule/youtubeVids'
 import { useRef, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-
+import Plx from 'react-plx'
 
 export default function Home() {
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   
   
-  const VideosSection = useRef(null)
-  const scrollToSection = (elementRef) => {
-    window.scrollTo({
-      top: elementRef.current.offsetTo,
-      behaviour: 'smooth'
-    })
-  }
+
+  
   return (
-    <div className='home-page'  >
+    
+    <div  className='home-page'  >
      
-      <div id='video-bg'>
+      <div    id='video-bg'>
         
         <VideoBg />
         
         </div>
-      <div id='background-recent-videos'>
-      <div id='recent-videos' >
-        
-        <h1 className='recent-videos-title'>Recent Videos</h1>
-      
-        <p className='recent-videos-description'>adskjgbaskdjgbakjsgdbajksgbkjasgd</p>
-        <div id='foreground' > 
-          <YoutubeVids />
-          </div> 
+        <Plx
+            parallaxData={[{
+              start: "self",
+              startOffset: 0,
+              duration: "80vh",
+              easing:"ease-in",
+              properties: [
+                {
+                    startValue:0,
+                    endValue:-10,
+                    unit:"vh",
+                    property:"translateY"
+                }
+              ]
+            }
+          ]}
+            >
+      <div    id='background-recent-videos'>
+        <div    id='recent-videos' >
+        <Plx
+            parallaxData={[{
+              start: "self",
+              startOffset: 0,
+              duration: "80vh",
+              easing:"ease-in",
+              properties: [
+                {
+                    startValue:10,
+                    endValue:0,
+                    unit:"vh",
+                    property:"translateY"
+                }
+              ]
+            }
+          ]}
+            >
+          <h1 className='recent-videos-title'>Recent Videos</h1>
+          <Plx
+            parallaxData={[{
+              start: "self",
+              startOffset: 0,
+              duration: "80vh",
+              easing:"ease-in",
+              properties: [
+                {
+                    startValue:10,
+                    endValue:-10,
+                    unit:"vh",
+                    property:"translateY"
+                }
+              ]
+            }
+          ]}
+            >
+            <p className='recent-videos-description'>Like and subscribe!</p>
+            </Plx>
+          </Plx>
+              <YoutubeVids />
+          
+        </div>
       </div>
-      </div>
-      <div id='content-box-place'>
+      </Plx>
+      {/* <div id='content-box-place'>
         <ContentBox />
-      </div>
+      </div> */}
        
         
     </div>
