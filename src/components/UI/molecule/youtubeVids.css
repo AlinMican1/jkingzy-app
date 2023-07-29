@@ -1,80 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&family=Poppins:wght@600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-.card-container {
-    width: fit-content;
-    background-color: rgb(43, 40, 40);
-    justify-content: center;
-    margin: auto;
-    background-image: url("../../../assets/plane1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: center; 
-    display: flex;
-    flex-wrap: wrap;
-    border: 2px solid black;
-    padding-bottom: 55px ;
-    padding-top: 70px;
-    margin-top: 60px;
-    
-    box-shadow: 1px 1px 10px 1px #000000;
-  }
-
-/* Basic styling for the card container */
-.card {
-   
-    width: 90vw;
-    transition: .2s all;
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.523);
-    
-    /* box-shadow: 0px 3px 10px 3px #000000; */
-    transition: .2s all;
-}
   
-/* Styling for the thumbnail */
-.thumbnail {
-    width: 400px; /* Adjust the width as needed */
-    height: auto;
-    border-radius: 4px;
-    margin-right: 10px;
-    aspect-ratio: 3/2;
-    border: solid 2px #ffffff;
-    box-shadow: 0px 3px 10px 3px #000000;
-   
-    
- 
-    
   
-    
-   
-   
-}
-  
-/* Styling for the content on the right */
-.content {
-    flex: 1;
-    margin: auto;
-}
-  
-  /* Style for the title */
-  .title {
-    font-size: 35px;
-    font-weight: 100;
-    text-align: center;
-    font-family: 'Poppins';
-    
-  }
-  
-  /* Style for the description */
-  .description {
-    font-size: 16px;
-    text-align: center;
-    padding: 0px 100px
-  }
 .custom-link{
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -82,31 +8,7 @@
 .custom-link:active{
   color: rgb(255, 255, 255);
 }
-  /*FOR ALL OTHER CARDS*/
   
-  .card-all {
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.523);
-    width:44vw;
-    /* box-shadow: 0px 3px 10px 3px #000000; */
-    transition: .2s all;
-  }
-  .thumbnail-all{
-    
-    width: 200px;
-    height: auto;
-    border-radius: 4px;
-    margin-right: 10px;
-    aspect-ratio: 3/2;
-    border: solid 2px #ffffff;
-    box-shadow: 0px 3px 10px 3px #000000;
-
-  }
 
   .title-all {
     font-size: 20px;
@@ -201,7 +103,7 @@
 }
 
 .videoArray > div{
-  border: 1px solid black;
+  border: 1px solid #00A8D0;
   overflow:hidden;
   border-radius: 6px;
   
@@ -219,7 +121,7 @@
   object-fit: cover;
   transition: transform .2s ease; /* Move the transition property here */
   aspect-ratio: 3/2;
-  background-color: black;
+  
 }
 
 

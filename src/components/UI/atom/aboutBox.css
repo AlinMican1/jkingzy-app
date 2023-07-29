@@ -1,0 +1,83 @@
+.about-container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 255, 255, 0);
+    position: relative;
+    
+    
+}
+.about-container img{
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+    aspect-ratio: 3/2;
+    clip-path: polygon(55% 0, 100% 0%, 100% 100%, 33% 100%);
+    
+    
+}
+.shaped{
+    float:left;
+    height:100vh;
+    width:100vw;
+    float:right;
+    background: black url(../../../../styles/niceBg.jpg) center top no-repeat;
+    background-size:cover;
+    shape-outside: polygon(55% 0, 100% 0%, 100% 100%, 33% 100%);
+    shape-margin: 20px;
+    clip-path: polygon(55% 0, 100% 0%, 100% 100%, 33% 100%);
+}
+.about-description-phone{
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255,255,255,0.1);
+    display: none;
+}
+.about-description-desktop{
+
+}
+.about-description-desktop h1{
+    font-size: 60px;
+    color: rgb(53, 107, 154);
+    text-align: center;
+}
+.about-description-desktop p{
+    padding: 3vw;
+    padding-left: 2vw;
+    padding-left: 2vw;
+    font-size: 20px;
+    color: rgb(53, 107, 154);
+    text-align: center;
+}
+.about-description-phone h1{
+    font-size: 60px;
+    color: rgb(53, 107, 154);
+    text-align: center;
+}
+.about-description-phone p{
+    
+    padding: 3vw;
+    padding-left: 2vw;
+    padding-left: 2vw;
+    font-size: 20px;
+    color: rgb(53, 107, 154);
+    text-align: center;
+  
+}
+@media screen and (max-width: 800px) { 
+    .shaped{
+        shape-outside: none;
+        clip-path: none;
+        width:100vw;
+    }
+    .about-description-desktop{
+        display: none;
+    }
+    .about-description-phone{
+        display: inline-block;
+    }
+}
