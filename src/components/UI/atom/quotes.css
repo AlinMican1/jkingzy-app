@@ -1,0 +1,97 @@
+.quotes-wrapper{
+    display: flex;
+    height: 500px;
+    width: 100%;
+    background-color: rgba(249, 249, 249, 0);
+    flex-direction: row;
+    gap: 3vw;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    
+    
+}
+.quotes-wrapper img{
+    object-fit: cover;
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    aspect-ratio: 3/2;
+    
+}
+.quotes-wrapper  p {
+    font-size: 18px;
+    text-align: center; /* Center the text horizontally */
+    display: flex; /* Enable flexbox layout for centering */
+    align-items: center; /* Center the text vertically */
+    margin: 0; /* Remove any default margin */
+    
+    width: 100%; /* Ensures the text takes up the full width of the box */
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    backface-visibility: hidden;
+}
+
+
+
+#box-one{
+    width: 15vw;
+    height: 300px;
+    
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    display: flex;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.482);
+    border-radius: 10px;
+    border: 2px solid #00A8D0;
+    padding: 20px;
+}
+
+#box-two{
+    width: 15vw;
+    height: 300px;
+    padding: 20px;
+    
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    display: flex;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.482);
+    border-radius: 10px;
+    border: 2px solid #00A8D0;
+   
+}
+#box-three{
+    width: 15vw;
+    height: 300px;
+    padding: 20px;
+    
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    display: flex;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.482);
+    border-radius: 10px;
+    border: 2px solid #00A8D0;
+}
+@media (max-width: 800px) {
+    .quotes-wrapper {
+      flex-direction: column; /* Display boxes vertically */
+      height: auto; /* Allow height to adjust based on content */
+      gap:3vw
+    }
+    
+    #box-one,
+    #box-two,
+    #box-three {
+      width: 80%; /* Take up full width of the container */
+      height: 100px; /* Allow height to adjust based on content */
+      margin-bottom: 20px; /* Add some margin for spacing between boxes */
+    }
+
+    .quotes-wrapper  p {
+        font-size: 15px;
+      
+    }
+  }

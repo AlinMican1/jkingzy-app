@@ -22,7 +22,7 @@
     
 }
 .gallery-item:hover{
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid #00A8D0;
     
 }
 
@@ -72,7 +72,7 @@
     transform: scale(1.1);
 }
 .span-title{
-    color: rgb(147, 147, 237);
+    color: #00A8D0;
     white-space: pre;
 }
 
