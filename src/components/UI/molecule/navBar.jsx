@@ -99,8 +99,8 @@ const NavBar = () => {
             <Link href="/about" className='active'> 
             <Button btnText={'About'} btnVariant={'default'}/>
             </Link>
-            <Link href="#" className='active'> 
-            <Button btnText={'Gallery'} btnVariant={'default'}/>
+            <Link href="/specs" className='active'> 
+            <Button btnText={'Hardware'} btnVariant={'default'}/>
             </Link>
         </nav>
         </div>

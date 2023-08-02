@@ -108,7 +108,7 @@ a {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 .home-page{
-  height: 200vh;
+  height: 100vh;
   
 }
 
@@ -126,10 +126,6 @@ a {
   height: 100vh; 
   margin-top: 0px; 
   background-color:#121718;
-  /* background-image: url('./tester2.jpg');
-  background-size: cover; 
-  aspect-ratio: 3/2;
-  object-fit: cover; */
 }
 
 #background-recent-videos{
@@ -146,18 +142,11 @@ a {
   
 }
 
-#foreground{
-  background-size: cover; /* Adjust the background size as needed */
-  background-repeat: no-repeat;
-  display: flex;
-  width: 100%;
-  height:700px;
-}
 
 #content-box-place{
   width: 100%;
   height: auto; 
-  margin-top: 30px;
+  
 }
 
 .custom-link{
@@ -273,6 +262,61 @@ height:100vh;
   width: 100%;
   background-color: rgba(234, 17, 17, 0);
 }
+/* SPECS PAGE */
+.specs-page{
+  height: 100vh;
+}
+#specs-pc-section{
+  height:auto;
+  display: flex;
+  background-color: #ffffff00;
+  gap: 0px;
+  margin-top: 80px;
+  width: 100%;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 80px;
+  
+}
+#specs-pc-section2{
+  height:auto;
+  display: flex;
+  background-color: #ffffff00;
+  gap: 0px;
+  margin-top: 80px;
+  width: 100%;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 80px;
+  
+}
+.spec-image{
+  width: 52%;
+  object-fit: cover;
+  height: 563px;
+  margin: auto;
+  aspect-ratio: 3/2;
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  shape-outside: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  border-radius: 6px;
+  
+}
+.spec-image2{
+  width: 52%;
+  object-fit: cover;
+  height: 563px;
+  margin: auto;
+  aspect-ratio: 3/2;
+  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 0 100%, 25% 48%, 0 0);
+  border-radius: 6px;
+  
+}
+#specs-pc-video{
+  height:auto;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0);
+  margin-top: 80px;
+}
 
 /*DEFAULTS */
 body {
@@ -329,6 +373,47 @@ p{
     display: none;
   }
 }
+@media (max-width: 885px) {
+  #specs-pc-section{
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 100px;
+    width: 100%;  
+  }
+  #specs-pc-section2{
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 100px;
+    width: 100%;  
+    
+  }
+  .spec-image{
+    width: 85vw;
+    object-fit: cover;
+    height: 400px;
+    margin: auto;
+    aspect-ratio: 3/2;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    
+    border-radius: 6px;
+    
+  }
+  .spec-image2{
+    width: 85vw;
+    object-fit: cover;
+    height:400px;
+    margin: auto;
+    aspect-ratio: 3/2;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    border-radius: 6px;
+   
+    
+  }
+}
 
 
 @media screen and (max-width: 400px) {
@@ -347,7 +432,17 @@ p{
   p{
     font-size: 20px;
   }
+  .spec-image{
   
+    height: 300px;
+   
+    
+  }
+  .spec-image2{
+   
+    height:300px;
+   
+  }
 }
 
 @media screen and (max-width: 500px) and (min-width:400px) {
@@ -366,7 +461,17 @@ p{
   p{
     font-size: 20px;
   }
+  .spec-image{
   
+    height: 300px;
+   
+    
+  }
+  .spec-image2{
+   
+    height:300px;
+   
+  }
 }
 @media screen and (max-width: 600px) and (min-width:500px)  {
   #favorite-pics-flightSim{
@@ -384,7 +489,17 @@ p{
   p{
     font-size: 20px;
   }
+  .spec-image{
   
+    height: 350px;
+   
+    
+  }
+  .spec-image2{
+   
+    height:350px;
+   
+  }
 }
 
 @media screen and (max-width: 700px) and (min-width:600px)  {
@@ -400,6 +515,17 @@ p{
     margin-top: 1100px;
    
   } 
+  .spec-image{
+  
+    height: 350px;
+   
+    
+  }
+  .spec-image2{
+   
+    height:350px;
+   
+  }
 }
 
 @media screen and (max-width: 800px) and (min-width:700px)  {
@@ -415,6 +541,17 @@ p{
     margin-top: 1250px;
    
   } 
+  .spec-image{
+  
+    height: 350px;
+   
+    
+  }
+  .spec-image2{
+   
+    height:350px;
+   
+  }
 }
 @media screen and (max-width: 950px) and (min-width:800px)  {
   #favorite-pics-flightSim{

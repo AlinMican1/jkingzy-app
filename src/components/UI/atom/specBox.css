@@ -1,0 +1,107 @@
+.wrapper {
+    background-color: #121718;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 45vw;
+    height: 600px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  fieldset {
+    width: 90%;
+    height: 90%;
+    border-radius: 6px;
+    border: 3px solid #00A8D0;
+  }
+  legend {
+    font-size: 3.4em;
+    font-weight: 700;
+    font-family: 'Poppins';
+  }
+  legend span,
+  fieldset .text {
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    padding: 0 .5em;
+  }
+  legend span {
+    color: rgb(255, 255, 255);
+  }
+  fieldset .text {
+    height: 100%;
+  }
+  fieldset .text h1 {
+    text-align: center;
+  }
+  fieldset .text p {
+    line-height: 1.5;
+    text-align: left;
+    font-size: 21px;
+  }
+
+  /* @media (max-width: 1170px) {
+    legend {
+        font-size: 2.5em;
+       
+      }
+      fieldset .text p {
+        
+        font-size: 15px;
+      }
+} */
+
+@media (min-width:1284px) and (max-width:1604px) {
+      fieldset .text p {
+        
+        font-size: 19px;
+      }
+}
+@media (min-width:1170px) and (max-width:1284px)  {
+    fieldset .text p {
+      
+      font-size: 18px;
+    }
+}
+@media (min-width:885px) and (max-width:1170px)  {
+    fieldset .text p {
+      
+      font-size: 15px;
+    }
+    legend {
+        font-size: 2.5em;
+        
+      }
+    
+}
+@media (min-width:605px) and (max-width:885px) {
+    .wrapper {
+       
+        width: 90vw;
+        height: 400px;
+      }
+    fieldset .text p {
+      
+        font-size: 15px;
+    }
+    legend {
+        font-size: 2.5em;
+          
+    }
+}
+@media (max-width:605px){
+    .wrapper {
+        width: 90vw;
+        height: 500px;
+      }
+    fieldset .text p {
+        font-size: 13px;
+    }
+    legend {
+        font-size: 2em;
+          
+    }
+}

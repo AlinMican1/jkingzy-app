@@ -2,12 +2,9 @@
 import Image from 'next/image'
 import React from 'react'
 import './parallax.css'
-import background from '../../assets/backgroundclouds.jpg'
-import cloudsForeground2 from '../../assets/cloudsForeground2.png'
-import planeForeground from '../../assets/planeForeground.png'
 import { useEffect, useRef } from 'react'
 
-const Parallax = () => {
+const Parallax = ({backgroundSrc, foreground1Src, foreground2Src, titleTxt}) => {
     const backgroundRef = useRef(null);
     const planeRef = useRef(null);
     const cloudRef = useRef(null);
@@ -41,10 +38,10 @@ const Parallax = () => {
     return (
     <div className='main-body'>
     <section className='parallax-wrapper'>
-        <Image src={background} ref={backgroundRef} id='background' alt='' />
-        <Image src={planeForeground} ref={planeRef} id='plane' alt='' />
-        <Image src={cloudsForeground2} ref={cloudRef} id='clouds' alt=''/>
-        <h2 id='title-parallax' ref={textRef}>Joshua King</h2>
+        <Image src={backgroundSrc} ref={backgroundRef} id='background' alt='' />
+        <Image src={foreground1Src} ref={planeRef} id='plane' alt='' />
+        <Image src={foreground2Src} ref={cloudRef} id='clouds' alt='' />
+        <h2 id='title-parallax' ref={textRef}>{titleTxt}</h2>
         <div className='parallax-overlay'></div>
         
     </section>
