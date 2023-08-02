@@ -318,6 +318,11 @@ height:100vh;
   margin-top: 80px;
 }
 
+/* WORK PAGE */ 
+.work-page{
+  height: 200vh;
+}
+
 /*DEFAULTS */
 body {
   margin: 0px;
