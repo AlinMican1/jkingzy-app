@@ -1,8 +1,9 @@
 'use client'
 import '../styles/globals.css'
 import NavBar from '@/components/UI/molecule/navBar'
+import {useEffect } from 'react';
 
-import { useEffect } from 'react';
+
 export default function RootLayout({ children }) {
   useEffect(() => {(
     async () => {
@@ -18,12 +19,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
      
           
-            <body  >
+        <body  >
+         
         <NavBar />
         <div  >
         {children}
         </div>
-        
+       
         </body>
         
         

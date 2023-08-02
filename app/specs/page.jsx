@@ -29,6 +29,7 @@ const Specs = () => {
   ,'Headeset: Logitech G PRO X Gaming-Headset']
   
   return ( 
+    
     <div className='specs-page'>
       <Parallax backgroundSrc={background} foreground1Src={transparent} foreground2Src={transparent} titleTxt={'Hardware'}/>
       <motion.div initial={"offscreen"} whileInView={'onscreen'} viewport={{once:true}} variants={AnimatePicture} id="specs-pc-section">
@@ -43,7 +44,7 @@ const Specs = () => {
       <SpecVideo />
       </div>
     </div>
-
+    
   )
 }
 
