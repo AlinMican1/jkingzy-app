@@ -88,16 +88,18 @@ const NavBar = () => {
     return (
     <header >
         <div className='inner-flex'>
+          <Link href="/" >
            <div><Logo /></div>
+          </Link>
         <nav>
-            <Link href="/gallery" className='active'>
-            <Button btnText={'Gallery'} btnVariant={'default'}/>
-            </Link>
-            <Link href="/" className='active'> 
-            <Button btnText={'Home'} btnVariant={'default'}/>
-            </Link>
             <Link href="/about" className='active'> 
             <Button btnText={'About'} btnVariant={'default'}/>
+            </Link>
+            <Link href="/" className='active'> 
+            <Button btnText={'Work'} btnVariant={'default'}/>
+            </Link>
+            <Link href="/gallery" className='active'>
+            <Button btnText={'Gallery'} btnVariant={'default'}/>
             </Link>
             <Link href="/specs" className='active'> 
             <Button btnText={'Hardware'} btnVariant={'default'}/>

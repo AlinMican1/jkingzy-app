@@ -3,7 +3,9 @@ import React from 'react'
 import './specVideo.css'
 import {motion, Variants} from 'framer-motion'
 import { Container } from 'react-bootstrap';
+
 const SpecVideo = () => {
+    
     const VideoAnimation ={
         offscreen:{ opacity: 0, scale: 0.5 },
         onscreen:{
@@ -18,7 +20,13 @@ const SpecVideo = () => {
    <Container>
     
     <motion.div initial={"offscreen"} whileInView={'onscreen'} viewport={{once:true}} variants={VideoAnimation} className='spec-video-container'>
-        <iframe src="https://www.youtube.com/embed/hiy8iBaOTUU?si=QspMWNP0f72DwmmH" title='Youtube video' allowFullScreen /> 
+    
+          <iframe
+            src="https://www.youtube.com/embed/hiy8iBaOTUU?si=QspMWNP0f72DwmmH"
+            title='Youtube video'
+            allowFullScreen
+            
+          />
     </motion.div>
     
     </Container>

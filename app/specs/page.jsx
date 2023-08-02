@@ -27,6 +27,7 @@ const Specs = () => {
   const PeripheralsSpecs = ['Camera: Sony AX53 4K Camcorder', 'Microphone: RODE VideoMIC GO', 'Action Cam: GoPro Hero 9', 'Video Editing Software: DaVinci Resolve 18'
   ,'Monitor: MSD Optix MAG241C', '2nd Monitor: Samsung C24F390FHR', 'Mouse: Razer DeathAdder Essential', 'Pedals:T.Flight Rudder', 'Joystick and Throttle: Thrustmaster T16000M FCS Hotas' 
   ,'Headeset: Logitech G PRO X Gaming-Headset']
+  
   return ( 
     <div className='specs-page'>
       <Parallax backgroundSrc={background} foreground1Src={transparent} foreground2Src={transparent} titleTxt={'Hardware'}/>
