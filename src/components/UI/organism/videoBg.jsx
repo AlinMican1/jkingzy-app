@@ -27,7 +27,7 @@ const VideoBg = () => {
               properties: [
                 {
                     startValue:0,
-                    endValue:-10,
+                    endValue:-0,
                     unit:"vh",
                     property:"translateY"
                 }

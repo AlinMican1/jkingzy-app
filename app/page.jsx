@@ -19,29 +19,18 @@ export default function Home() {
   return (
     
     <div  className='home-page'  >
-     
-      <div    id='video-bg'>
+       
+      <div id='video-bg'>
         
         <VideoBg />
         
         </div>
-        <Plx
-            parallaxData={[{
-              start: "self",
-              startOffset: 0,
-              duration: "80vh",
-              easing:"ease-in",
-              properties: [
-                {
-                    startValue:0,
-                    endValue:-10,
-                    unit:"vh",
-                    property:"translateY"
-                }
-              ]
-            }
-          ]}
-            >
+        
+        <div id='content-box-place'>
+        <ContentBox />
+      </div>
+     
+       
       <div    id='background-recent-videos'>
         <div    id='recent-videos' >
         <Plx
@@ -82,14 +71,12 @@ export default function Home() {
             <p className='recent-videos-description'>Like and subscribe!</p>
             </Plx>
           </Plx>
-              <YoutubeVids />
+              <YoutubeVids  />
           
         </div>
       </div>
-      </Plx>
-      {/* <div id='content-box-place'>
-        <ContentBox />
-      </div> */}
+      
+     
        
         
     </div>
