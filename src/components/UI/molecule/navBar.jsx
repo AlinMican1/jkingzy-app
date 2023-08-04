@@ -5,42 +5,11 @@ import Button from '../atom/button'
 import Logo from '../atom/logo'
 import Link from 'next/link'
 import '../../../../styles/globals.css'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 const NavBar = () => {
+  const [activeButton, setActiveButton] = useState('Home');
   useEffect(() => {
-    // const body = document.body;
-    // let lastScroll = 0;
-
-    // const handleScroll = () => {
-    //   const currentScroll = window.scrollY;
-
-    //   if (currentScroll <= 0) {
-    //     body.classList.remove("scroll-up");
-    //   } else if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-    //     body.classList.remove("scroll-up");
-    //     body.classList.add("scroll-down");
-    //   } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
-    //     body.classList.remove("scroll-down");
-    //     body.classList.add("scroll-up");
-    //   }
-
-    //   lastScroll = currentScroll;
-    // };
-
-    // window.addEventListener("scroll", handleScroll);
-
-    
-    // const buttons = document.querySelectorAll(".default");
-
-    // const handleClick = (event) => {
-    //   buttons.forEach((btn) => btn.classList.remove("active"));
-    //   event.target.classList.add("active");
-    // };
-
-    // buttons.forEach((button) => {
-    //   button.addEventListener("click", handleClick);
-    // });
     const headerElement = document.querySelector('header');
     
     const handleScroll = () => {
@@ -52,57 +21,40 @@ const NavBar = () => {
         headerElement.classList.remove('active-navbar');
       }
     };
-
-    //window.addEventListener('scroll', handleScroll);
+    
+   
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      //window.removeEventListener("scroll", handleScroll);
-      // buttons.forEach((button) => {
-      //   button.removeEventListener("click", handleClick);
-      // });
+     
     };
   }, []); 
-
+  const handleButtonClick = (buttonText) => {
+    setActiveButton(buttonText);
+  };
   
-      // useEffect(() => {
-      //   const headerElement = document.querySelector('header');
-    
-      //   const handleScroll = () => {
-      //     const isScrollDown = window.scrollY > 50;
-      //     if (isScrollDown) {
-      //       headerElement.classList.add('active-navbar');
-      //     } 
-      //     else if(isScrollDown < 50){
-      //       headerElement.classList.remove('active-navbar');
-      //     }
-      //   };
-    
-      //   window.addEventListener('scroll', handleScroll);
-    
-      //   return () => {
-      //     window.removeEventListener('scroll', handleScroll);
-      //   };
-      // }, []);
     
     return (
     <header >
         <div className='inner-flex'>
-          <Link href="/" >
+          <Link href="/" onClick={() => handleButtonClick('Home')} >
            <div><Logo /></div>
           </Link>
         <nav>
+            <Link href="/" className='active'> 
+            <Button btnText={'Home'} btnVariant={activeButton === 'Home' ? 'default active' : 'default'}  onClick={() => handleButtonClick('Home')}/>
+            </Link>
             <Link href="/about" className='active'> 
-            <Button btnText={'About'} btnVariant={'default'}/>
+            <Button btnText={'About'} btnVariant={activeButton === 'About' ? 'default active' : 'default'}  onClick={() => handleButtonClick('About')}/>
             </Link>
             <Link href="/work" className='active'> 
-            <Button btnText={'Work'} btnVariant={'default'}/>
+            <Button btnText={'Work'} btnVariant={activeButton === 'Work' ? 'default active' : 'default'}  onClick={() => handleButtonClick('Work')}/>
             </Link>
             <Link href="/gallery" className='active'>
-            <Button btnText={'Gallery'} btnVariant={'default'}/>
+            <Button btnText={'Gallery'} btnVariant={activeButton === 'Gallery' ? 'default active' : 'default'}  onClick={() => handleButtonClick('Gallery')}/>
             </Link>
             <Link href="/specs" className='active'> 
-            <Button btnText={'Hardware'} btnVariant={'default'}/>
+            <Button btnText={'Hardware'} btnVariant={activeButton === 'Specs' ? 'default active' : 'default'}  onClick={() => handleButtonClick('Specs')}/>
             </Link>
         </nav>
         </div>

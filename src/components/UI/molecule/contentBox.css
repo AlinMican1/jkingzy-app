@@ -4,27 +4,40 @@
     background-color: rgba(240, 248, 255, 0);
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: row;
+    margin-top: 50px;
+    gap: 10px;
 }
-.content-paragraph{
+/* .content-paragraph{
     width: 50%;
     height: auto;
-    background-color: rgba(0, 255, 255, 0);
+    background-color: rgba(12, 241, 241, 0);
     position: relative;
-    justify-content: center;
-    align-items: center;
     display: flex;
     flex-direction: column;
 }
 .content-paragraph h1{
     font-size: 35px;
+    margin-top: 30px;
 }
 .content-paragraph p{
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
+    margin-top: -10px;
     padding: 20px;
-}
+} 
+.find-out-box{
+    background-color: rgba(39, 224, 45, 0);
+    width: auto;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    
+    flex-direction: row;
+    margin-top: 35px;
+    align-items: center;
+    justify-content: center;
+} */
 
 .default-box{
     width: 25%;
@@ -35,6 +48,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-top: -20px;
     
 }
 .socials-box{
@@ -46,13 +60,14 @@
     justify-content: space-evenly;
 }
 .default-box h1{
-    font-size: 50px;
-    color: rgb(0, 0, 0);
-    font-family: 'Roboto';  
+    font-size: 45px;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins';  
+    margin-top: -20px;
 }
 
 .socials-icon-youtube{
-    color: black;
+    color: white;
     font-size: 50px;
 }
 .socials-icon-youtube:hover{
@@ -62,7 +77,7 @@
 }
 
 .socials-icon-tiktok{
-    color: black;
+    color: white;
     font-size: 50px;
 }
 .socials-icon-tiktok:hover{
@@ -71,7 +86,7 @@
     transform: scale(1.1);
 }
 .socials-icon-instagram{
-    color: black;
+    color: white;
     font-size: 50px;
 }
 .socials-icon-instagram:hover{
@@ -96,6 +111,17 @@
     gap: 10px;
     flex-direction: row;
     margin-top: 35px;
+    align-items: center;
+    justify-content: center;
+}
+.support-channel-box{
+    background-color: rgba(39, 224, 45, 0);
+    width: 350px;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    margin-top: 10px;
     align-items: center;
     justify-content: center;
 }

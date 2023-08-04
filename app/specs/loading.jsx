@@ -5,4 +5,3 @@ export default function Loading () {
         <h1>LOADING.....</h1>
   )
 }
-

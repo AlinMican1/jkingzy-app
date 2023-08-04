@@ -41,7 +41,7 @@ export const YoutubeVids = () =>{
                 <Link className="custom-link" href={allVideos[0].VideoLink}>
                      
                 <div className="vid-wrapper" >
-                <img className="video-placement" src={allVideos[0].snippet.thumbnails.high.url} alt={allVideos[0].snippet.title} />
+                <img quality={100} className="video-placement" src={allVideos[0].snippet.thumbnails.high.url} alt={allVideos[0].snippet.title} />
                 
                 <div className="video-description" >
                     

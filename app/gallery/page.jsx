@@ -7,7 +7,7 @@ import '../../styles/globals.css'
 import { FlightSimPics, RealLifePics } from '@/lib/imageScrollData'
 import PhotoGallery from '@/components/UI/atom/photoGallery'
 import Plx from 'react-plx'
-const Gallery = () => {
+export default async function Gallery () {
   return (
     <div className='gallery-page'>
        <div id='auto-display-photo'>
@@ -128,4 +128,3 @@ const Gallery = () => {
   )
 }
 
-export default Gallery

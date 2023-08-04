@@ -1,39 +1,28 @@
 'use client'
-import Image from 'next/image'
-import styles from './page.module.css'
-import Button from '@/components/UI/atom/button'
 import VideoBg from '@/components/UI/organism/videoBg'
-import NavBar from '@/components/UI/molecule/navBar'
 import ContentBox from '@/components/UI/molecule/contentBox'
 import '../styles/globals.css'
-import YoutubeVids from '@/components/UI/molecule/youtubeVids'
-import { useRef, useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import YoutubeVids from '../src/components/UI/molecule/youtubeVids'
 import Plx from 'react-plx'
+import WelcomeBox from '../src/components/UI/molecule/welcomeBox'
 
-export default function Home() {
-  
-  
-
+export default async function Home() {
   
   return (
     
     <div  className='home-page'  >
-       
+      
       <div id='video-bg'>
         
         <VideoBg />
         
         </div>
-        
-        <div id='content-box-place'>
-        <ContentBox />
-      </div>
-     
-       
-      <div    id='background-recent-videos'>
-        <div    id='recent-videos' >
-        <Plx
+        <div id="welcome-content">
+          <WelcomeBox />
+        </div>
+      
+        <div id='recent-videos' >
+           <Plx
             parallaxData={[{
               start: "self",
               startOffset: 0,
@@ -50,17 +39,18 @@ export default function Home() {
             }
           ]}
             >
-          <h1 className='recent-videos-title'>Recent Videos</h1>
-          <Plx
+            <div className="text-container">
+              <h1 className='recent-videos-title'>Recent Videos</h1>
+              <Plx
             parallaxData={[{
               start: "self",
               startOffset: 0,
-              duration: "80vh",
+              duration: "130vh",
               easing:"ease-in",
               properties: [
                 {
                     startValue:10,
-                    endValue:-10,
+                    endValue:-5,
                     unit:"vh",
                     property:"translateY"
                 }
@@ -68,14 +58,16 @@ export default function Home() {
             }
           ]}
             >
-            <p className='recent-videos-description'>Like and subscribe!</p>
+              <p className='recent-videos-description'>Like and subscribe!</p>
+              </Plx>
+            </div>
             </Plx>
-          </Plx>
               <YoutubeVids  />
           
         </div>
+      <div id='content-box-place'>
+        <ContentBox />
       </div>
-      
      
        
         

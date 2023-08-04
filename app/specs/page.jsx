@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import Parallax from '@/components/animations/parallax'
+import Parallax from '../../src/components/animations/parallax'
 import background from '../../src/assets/pcBackground.jpg'
 import transparent from '../../src/assets/transparent.png'
 import '../../styles/globals.css'
@@ -8,7 +8,8 @@ import SpecBox from '@/components/UI/atom/specBox'
 import SpecVideo from '@/components/UI/atom/specVideo'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-const Specs = () => {
+
+export default async function Specs () {
   const AnimatePicture ={
     offscreen:{ opacity: 0, scale: 0.5 },
     onscreen:{
@@ -47,5 +48,3 @@ const Specs = () => {
     
   )
 }
-
-export default Specs
