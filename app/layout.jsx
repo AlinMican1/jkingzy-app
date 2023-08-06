@@ -3,7 +3,7 @@ import '../styles/globals.css'
 import NavBar from '../src/components/UI/molecule/navBar'
 import {useEffect, Suspense } from 'react';
 import Loading from './loading';
-
+import Footer from '../src/components/UI/atom/footer'
 
 export default function RootLayout({ children }) {
   useEffect(() => {(
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         {children}
         
         </div>
-       
+        {/* <Footer /> */}
         </body>
         
         

@@ -20,12 +20,27 @@
     
 }
 .timeline-items .timeline-plane{
+    
     transform: rotate(90deg);
     position: absolute;
     color: #00A8D0;
     font-size: 30px;
     top: -30px; /* Start the plane above the timeline */
     left: calc(50% - 13px);
+	
+}
+.timeline-items .timeline-line{
+    
+    content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+    position: absolute;
+    background-color: #00A8D0;
+    
+    top: -30px; /* Start the plane above the timeline */
+    left: calc(50% - 1px);
+	
 }
 
 
@@ -103,6 +118,11 @@
 	.timeline-items::before{
 		left: 7px;
 	}
+	.timeline-items .timeline-line{
+    
+		left: 7px;
+		
+	}
 	.timeline-item:nth-child(odd){
 		padding-right: 0;
 		text-align: left;
@@ -113,5 +133,14 @@
 	}
 	.timeline-dot{
 		left:0;
+	}
+	.timeline-items .timeline-plane{
+    
+		transform: rotate(90deg);
+		position: absolute;
+		color: #00A8D0;
+		font-size: 30px;
+		top: -30px; /* Start the plane above the timeline */
+		left: -5.5px;
 	}
 }

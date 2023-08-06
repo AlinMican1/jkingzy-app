@@ -5,29 +5,12 @@ import { faYoutube, faTiktok , faInstagram} from '@fortawesome/free-brands-svg-i
 import Button from '../atom/button'
 import Link from 'next/link'
 import '../../../../styles/globals.css'
-import Reveal from '@/components/animations/reveal'
+
 
 const ContentBox = () => {
   return (
     <div className='main-content-box'>
-      {/* <div className='content-paragraph'>
-        <h1>Hello and Welcome to my website</h1> 
-        <p>My name is Joshua and i am a flight Sim streamer and plane enjoyer. 
-          I create Youtube content and Fiverr custom content chosen by fellow customers </p>
-          
-          <div className='find-out-box'>
-          <Link className='custom-link'  href="/about">
-              
-              <Button btnText={'More About Me'} btnVariant={'find-out-button'}/>
-              
-              </Link >
-              <Link className='custom-link'  href="/work">
-              
-              <Button btnText={'Some Of My Work'} btnVariant={'find-out-button'}/>
-              
-              </Link>
-          </div>
-      </div> */}
+      
     
       <div className="default-box">
           <h1>TheKingzAce</h1>

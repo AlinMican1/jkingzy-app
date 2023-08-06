@@ -3,7 +3,6 @@ import React from 'react'
 import './videoBg.css'
 import trailer from '../../../assets/trailer.mp4'
 import Button from '../atom/button'
-import Reveal from '@/components/animations/reveal'
 import ContentBox from '../molecule/contentBox'
 import YoutubeVids from '../molecule/youtubeVids'
 import { useRef , useEffect } from 'react'
@@ -27,7 +26,7 @@ const VideoBg = () => {
               properties: [
                 {
                     startValue:0,
-                    endValue:-0,
+                    endValue:0,
                     unit:"vh",
                     property:"translateY"
                 }

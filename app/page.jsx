@@ -1,6 +1,6 @@
 'use client'
-import VideoBg from '@/components/UI/organism/videoBg'
-import ContentBox from '@/components/UI/molecule/contentBox'
+import VideoBg from '../src/components/UI/organism/videoBg'
+import ContentBox from '../src/components/UI/molecule/contentBox'
 import '../styles/globals.css'
 import YoutubeVids from '../src/components/UI/molecule/youtubeVids'
 import Plx from 'react-plx'

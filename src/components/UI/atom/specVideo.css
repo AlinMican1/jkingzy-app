@@ -1,12 +1,12 @@
 .spec-video-container {
-    width: 50%;
+    width: 80%;
     position: relative;
-    padding-bottom: 30%; /* Aspect ratio of 16:9 (9/16 = 0.5625) */
+    padding-bottom: 40%; /* Aspect ratio of 16:9 (9/16 = 0.5625) */
     margin: 0 auto;
     margin-top: -10px;
     
   }
-  
+
   .spec-video-container iframe {
     position: absolute;
     top: 0;
@@ -15,7 +15,9 @@
     height: 100%;
     border-radius: 6px;
   }
+ 
 
+ 
 @media (min-width: 0px) and (max-width:885px)  {
     .spec-video-container {
         width: 90%;

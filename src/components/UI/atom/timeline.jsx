@@ -7,17 +7,33 @@ import Link from 'next/link'
 const Timeline = () => {
     const [scrollY, setScrollY] = useState(0);
     const [planePosition, setPlanePosition] = useState(0);
-    const [planeInView, setPlaneInView] = useState(false);
+    const [windowDimension, setWindowDimension] = useState({ winWidth: typeof window !== 'undefined' ? window.innerWidth : 0 });
     const planeRef = useRef(null);
-  
+
+    const detectSize = () =>{
+      setWindowDimension ({
+        winWidth: window.innerWidth
+      })
+    }
     useEffect(() => {
+      window.addEventListener('resize', detectSize)
+      return () => {
+        window.removeEventListener('resize',detectSize)
+      
+      };
+    }, [windowDimension]);
+   
+    
+    useEffect(() => {
+
         const handleScroll = () => {
           setScrollY(window.scrollY);
         };
-    
+        
         window.addEventListener('scroll', handleScroll);
     
         return () => {
+  
           window.removeEventListener('scroll', handleScroll);
         };
       }, []);
@@ -25,45 +41,87 @@ const Timeline = () => {
       useEffect(() => {
         // Define a function to calculate the plane's position based on the scrollY value
         const calculatePlanePosition = () => {
-          // Adjust the factor to control the speed of the plane's movement
-          const factor = 0.85;
-          const newPosition = scrollY >= 100 ? (scrollY - 100) * factor : 0;
-          console.log(scrollY)
-          setPlanePosition(newPosition);
+            //Adjust plane movement based on size
+          if(windowDimension.winWidth > 1142){
+            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
+            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1100); // Map scrollY to 0-100%
+            setPlanePosition(newPosition);
+            
+          }
+          else if(windowDimension.winWidth >= 949 && windowDimension.winWidth < 1143){
+            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
+            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1125); // Map scrollY to 0-100%
+            setPlanePosition(newPosition);
+            
+            
+          }
+          else if(windowDimension.winWidth > 890 && windowDimension.winWidth < 949){
+            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
+            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1200); // Map scrollY to 0-100%
+            setPlanePosition(newPosition);
+            
+          }
+          else if(windowDimension.winWidth > 795 && windowDimension.winWidth <= 890){
+            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
+            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1205); // Map scrollY to 0-100%
+            setPlanePosition(newPosition);
+            
+          }
+          else if(windowDimension.winWidth > 767 && windowDimension.winWidth <= 795){
+            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
+            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1230); // Map scrollY to 0-100%
+            setPlanePosition(newPosition);
+            
+          }
+          else if(windowDimension.winWidth > 500 && windowDimension.winWidth <= 649){
+            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
+            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1120); // Map scrollY to 0-100%
+            setPlanePosition(newPosition);
+            
+          }
+          else if(windowDimension.winWidth > 472 && windowDimension.winWidth <= 500){
+            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
+            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1200); // Map scrollY to 0-100%
+            setPlanePosition(newPosition);
+           
+          }
+          else if(windowDimension.winWidth > 400 && windowDimension.winWidth <= 472){
+            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
+            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1205); // Map scrollY to 0-100%
+            setPlanePosition(newPosition);
+            
+          }
+          else if(windowDimension.winWidth > 390 && windowDimension.winWidth <= 400){
+            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
+            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1310); // Map scrollY to 0-100%
+            setPlanePosition(newPosition);
+            
+          }
+          else if(windowDimension.winWidth > 375 && windowDimension.winWidth <= 390){
+            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
+            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1320); // Map scrollY to 0-100%
+            setPlanePosition(newPosition);
+            
+          }
+          else if(windowDimension.winWidth > 0 && windowDimension.winWidth <= 375){
+            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
+            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1300); // Map scrollY to 0-100%
+            setPlanePosition(newPosition);
+            
+          }
+          
+          else{
+            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
+            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1050); // Map scrollY to 0-100%
+            setPlanePosition(newPosition);
+            
+          }
+        
         };
     
         calculatePlanePosition();
       }, [scrollY]);
     
-      useEffect(() => {
-        // Initialize the Intersection Observer
-        const observer = new IntersectionObserver(
-          ([entry]) => {
-            if (entry.isIntersecting) {
-              // If the plane is in view, set planeInView to true
-              setPlaneInView(true);
-            } else {
-              // If the plane is out of view, set planeInView to false
-              setPlaneInView(false);
-            }
-          },
-          {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.6,
-          }
-        );
-    
-        if (planeRef.current) {
-          observer.observe(planeRef.current);
-        }
-    
-        return () => {
-          if (planeRef.current) {
-            observer.unobserve(planeRef.current);
-          }
-        };
-      }, [planeRef]);
   
     const AnimateBox = {
       offscreen: { y: 200, opacity: 0 },
@@ -80,10 +138,11 @@ const Timeline = () => {
     return (
       <section className="timeline-section">
         <div className="timeline-items">
+          <div className='timeline-line' ref={planeRef} style={{ height: `${planePosition}px` }}></div>
           <div
             className="timeline-plane"
             ref={planeRef}
-            style={{ transform:  `translateY(${planeInView ? planePosition : 0}px) rotate(90deg)`, }}
+            style={{ transform:  `translateY(${planePosition}px) rotate(90deg)`, }}
           >
             ✈
           </div>
