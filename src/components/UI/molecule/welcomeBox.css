@@ -1,0 +1,30 @@
+.content-paragraph{
+    width: 50%;
+    height: auto;
+    background-color: rgba(12, 241, 241, 0);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.content-paragraph h1{
+    font-size: 35px;
+    margin-top: 30px;
+}
+.content-paragraph p{
+    font-size: 20px;
+    text-align: center;
+    margin-top: -10px;
+    padding: 20px;
+} 
+.find-out-box{
+    background-color: rgba(39, 224, 45, 0);
+    width: auto;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    
+    flex-direction: row;
+    margin-top: 35px;
+    align-items: center;
+    justify-content: center;
+} 

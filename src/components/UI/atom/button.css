@@ -46,29 +46,80 @@ button{
     color: #00A8D0;
     
 }
+.active{
+    color: #00A8D0;
+    font-size: 16px;
+}
+.active::after{
+    width: 80%;
+
+border-radius: 6px;
+}
+
+
 .social-button{
     background-color: transparent;
     width: 150px;
     height: 50px;
-    color: rgb(0, 0, 0);
+    color: white;
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
     opacity: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid black;
+    border: solid #00A8D0;
     transition: .2s;
    
 }
 
 .social-button:hover{
-    background-color: black;
+    background-color: #00A8D0;
     color: white;
     transition: .2s;
    
 }
-
+.find-out-button{
+    background-color: transparent;
+    width: 250px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #00A8D0;
+    transition: .2s;
+   
+}
+.find-out-button:hover{
+    background-color: #00A8D0;
+    color: white;
+    transition: .2s;
+   
+}
+.support-button{
+    background-color: transparent;
+    width: 310px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #00A8D0;
+    transition: .2s;
+}
+.support-button:hover{
+    background-color: #00A8D0;
+    color: white;
+    transition: .2s;
+   
+}
 .welcome-button{
     width: 600px;
     height: 375px;
@@ -77,31 +128,7 @@ button{
     transition-duration: 0.2s;
     cursor: auto;
 }
-/* .welcome-button:hover{
-    padding-top: 10px;
-    transition-duration: 0.2s;
-    color: #DDE6FE;
-}
 
-.welcome-button:after{
-    content: '✈';
-    position: relative;
-    opacity: 0;  
-    top: 0px;
-    right: -20px;
-    transition: 0.5s;
-    color: #5733cb;
-    font-size: 75px;
-    font-family: 'Poppins';
-    font-weight: bold;
-    
-}
-
-.welcome-button:hover:after {
-    opacity: 1;
-    right: 10px;
-    
-  } */
 
   @media screen and (max-width : 740px){
     .default {

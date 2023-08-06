@@ -1,13 +1,9 @@
 'use client'
 import { useEffect, useState } from "react"
 import './youtubeVids.css'
-import test from '../../../../public/test.jpg'
-import Image from "next/image"
+
 import Link from "next/link"
 import {motion} from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import { useAnimation } from "framer-motion"
-import Reveal from "@/components/animations/reveal"
 
 
 const MaxResult = 5
@@ -41,7 +37,7 @@ export const YoutubeVids = () =>{
                 <Link className="custom-link" href={allVideos[0].VideoLink}>
                      
                 <div className="vid-wrapper" >
-                <img className="video-placement" src={allVideos[0].snippet.thumbnails.high.url} alt={allVideos[0].snippet.title} />
+                <img  className="video-placement" src={allVideos[0].snippet.thumbnails.high.url} alt={allVideos[0].snippet.title} />
                 
                 <div className="video-description" >
                     

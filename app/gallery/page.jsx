@@ -1,13 +1,13 @@
 'use client'
 import React from 'react'
-import { planeImages } from '@/lib/imageData'
-import ImageSlider from '@/components/animations/imageSlider'
-import {ImageScroll} from '@/components/animations/imageScroll'
+import { planeImages } from '../../src/lib/imageData'
+import ImageSlider from '../../src/components/animations/imageSlider'
+import {ImageScroll} from '../../src/components/animations/imageScroll'
 import '../../styles/globals.css'
-import { FlightSimPics, RealLifePics } from '@/lib/imageScrollData'
-import PhotoGallery from '@/components/UI/atom/photoGallery'
+import { FlightSimPics, RealLifePics } from '../../src/lib/imageScrollData'
+import PhotoGallery from '../../src/components/UI/atom/photoGallery'
 import Plx from 'react-plx'
-const Gallery = () => {
+export default async function Gallery () {
   return (
     <div className='gallery-page'>
        <div id='auto-display-photo'>
@@ -128,4 +128,3 @@ const Gallery = () => {
   )
 }
 
-export default Gallery

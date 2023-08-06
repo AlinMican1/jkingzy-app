@@ -1,13 +1,14 @@
 'use client'
 import React from 'react'
-import Parallax from '@/components/animations/parallax'
+import Parallax from '../../src/components/animations/parallax'
 import '../../styles/globals.css'
-import Quotes from '@/components/UI/atom/quotes'
-import AboutBox from '@/components/UI/atom/aboutBox'
+import Quotes from '../../src/components/UI/atom/quotes'
+import AboutBox from '../../src/components/UI/atom/aboutBox'
 import background from '../../src/assets/backgroundclouds.jpg'
 import cloudsForeground2 from '../../src/assets/cloudsForeground2.png'
 import planeForeground from '../../src/assets/planeForeground.png'
-const About = () => {
+
+export default async function About() {
   return (
     <div className='about-page'>
       <div id='parallax-effect-container'>
@@ -24,4 +25,3 @@ const About = () => {
   )
 }
 
-export default About

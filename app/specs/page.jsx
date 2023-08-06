@@ -1,14 +1,19 @@
 'use client'
 import React from 'react'
-import Parallax from '@/components/animations/parallax'
+import Parallax from '../../src/components/animations/parallax'
 import background from '../../src/assets/pcBackground.jpg'
 import transparent from '../../src/assets/transparent.png'
 import '../../styles/globals.css'
-import SpecBox from '@/components/UI/atom/specBox'
-import SpecVideo from '@/components/UI/atom/specVideo'
+import SpecBox from '../../src/components/UI/atom/specBox'
+import SpecVideo from '../../src/components/UI/atom/specVideo'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-const Specs = () => {
+import '../../src/components/UI/molecule/contentBox.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faYoutube} from '@fortawesome/free-brands-svg-icons'
+import Link from 'next/link'
+
+export default async function Specs () {
   const AnimatePicture ={
     offscreen:{ opacity: 0, scale: 0.5 },
     onscreen:{
@@ -41,11 +46,17 @@ const Specs = () => {
         <SpecBox title="Peripherals ✈" items={PeripheralsSpecs} />
       </motion.div>
       <div id='specs-pc-video'>
-      <SpecVideo />
+      <SpecVideo video={'https://www.youtube.com/embed/hiy8iBaOTUU?si=QspMWNP0f72DwmmH'}/>
       </div>
+      <div className='video-footer'>
+          <h1>Check out my channel</h1>
+          <p> <Link className='custom-link' href={"https://www.youtube.com/@TheKingzAce"}>
+         
+              <FontAwesomeIcon className="socials-icon-youtube"  icon={faYoutube}></FontAwesomeIcon>
+         
+         </Link></p>
+        </div>
     </div>
     
   )
 }
-
-export default Specs
