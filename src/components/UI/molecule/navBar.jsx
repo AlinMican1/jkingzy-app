@@ -6,7 +6,10 @@ import Logo from '../atom/logo'
 import Link from 'next/link'
 import '../../../../styles/globals.css'
 import { useState, useEffect } from 'react'
-
+import ToggleNavBar from './toggleNavBar'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars  } from '@fortawesome/free-solid-svg-icons';
+import {useWindowSize} from '../../../lib/SizeScreen-hook';
 const NavBar = () => {
   const [activeButton, setActiveButton] = useState('Home');
   useEffect(() => {
@@ -32,15 +35,29 @@ const NavBar = () => {
   const handleButtonClick = (buttonText) => {
     setActiveButton(buttonText);
   };
-  
-    
+  const [openDropNav, setDropNav] = useState(false);
+  const[width,height] = useWindowSize();
+  useEffect(()=>{
+      if(width >= 901){
+          setDropNav(false);
+      }
+  },[width])
     return (
     <header >
+        
+       
         <div className='inner-flex'>
           <Link href="/" onClick={() => handleButtonClick('Home')} >
            <div><Logo /></div>
           </Link>
+          
         <nav>
+        
+        <div>
+            <Button btnVariant={'hamburger-icon'} btnIcon={<FontAwesomeIcon icon={faBars} />} onClick={() => setDropNav(!openDropNav)} />
+            {openDropNav && <ToggleNavBar />}
+        </div>
+            <div className='button-toggle'>
             <Link href="/" className='active'> 
             <Button btnText={'Home'} btnVariant={activeButton === 'Home' ? 'default active' : 'default'}  onClick={() => handleButtonClick('Home')}/>
             </Link>
@@ -56,6 +73,7 @@ const NavBar = () => {
             <Link href="/specs" className='active'> 
             <Button btnText={'Hardware'} btnVariant={activeButton === 'Specs' ? 'default active' : 'default'}  onClick={() => handleButtonClick('Specs')}/>
             </Link>
+            </div>
         </nav>
         </div>
     </header>

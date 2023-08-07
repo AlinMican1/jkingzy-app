@@ -1,50 +1,69 @@
 import React from 'react'
 import './footer.css'
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faEnvelope  } from '@fortawesome/free-solid-svg-icons';
+import { faYoutube, faTiktok , faInstagram} from '@fortawesome/free-brands-svg-icons'
+
+import Link from 'next/link'
+
+      
 const Footer = () => {
   return (
-    <footer className="footer">
-    <div className="container">
-     <div className="row">
-       <div className="footer-col">
-         <h4>company</h4>
-         <ul>
-           <li><a href="#">about us</a></li>
-           <li><a href="#">our services</a></li>
-           <li><a href="#">privacy policy</a></li>
-           <li><a href="#">affiliate program</a></li>
-         </ul>
-       </div>
-       <div className="footer-col">
-         <h4>get help</h4>
-         <ul>
-           <li><a href="#">FAQ</a></li>
-           <li><a href="#">shipping</a></li>
-           <li><a href="#">returns</a></li>
-           <li><a href="#">order status</a></li>
-           <li><a href="#">payment options</a></li>
-         </ul>
-       </div>
-       <div className="footer-col">
-         <h4>online shop</h4>
-         <ul>
-           <li><a href="#">watch</a></li>
-           <li><a href="#">bag</a></li>
-           <li><a href="#">shoes</a></li>
-           <li><a href="#">dress</a></li>
-         </ul>
-       </div>
-       <div className="footer-col">
-         <h4>follow us</h4>
-         <div className="social-links">
-           <a href="#"><i className="fab fa-facebook-f"></i></a>
-           <a href="#"><i className="fab fa-twitter"></i></a>
-           <a href="#"><i className="fab fa-instagram"></i></a>
-           <a href="#"><i className="fab fa-linkedin-in"></i></a>
-         </div>
-       </div>
-     </div>
-    </div>
- </footer>
+  
+  <footer>
+   
+<div className="row primary">
+<div className="social">
+    
+  </div>
+  <div className="column about">
+
+  <h3>TheKingzAce</h3>
+
+   <p>
+      "You must develp personal contacts if you want to be successful." -Armstrong Williams
+  </p>
+
+  <div className="social">
+    <Link href={"https://www.youtube.com/@TheKingzAce"}>
+      <i className="fa-brands fa-youtube-square">
+        <FontAwesomeIcon icon={faYoutube}></FontAwesomeIcon>
+      </i>
+    </Link>
+    <Link href={"https://www.tiktok.com/@thekingzace"}>
+    <i className="fa-brands fa-instagram-square">
+        <FontAwesomeIcon icon={faTiktok}></FontAwesomeIcon>
+    </i>
+        </Link>
+    <Link href={"https://www.instagram.com/thekingzace/"}>
+            <i className="fa-brands fa-instagram-square">
+            <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
+            </i>
+      </Link>
+   
+  </div>
+</div>
+
+<div className="column links">
+<h3>Contact</h3>
+
+ <ul>
+  <li>
+  <p><FontAwesomeIcon icon={faEnvelope} style={{color: "#ffffff",}} /> thekingzacebusiness@gmail.com</p>
+  </li>
+  <li>
+   <p>Fiverr: @thekingzace</p>
+  </li>
+ </ul>
+</div>
+</div>
+<div className="row copyright">
+  <div className="footer-menu">
+
+  </div>
+   <p>Copyright &copy; 2023 TheKingzAce</p>
+</div>
+</footer>
         
     
   )
