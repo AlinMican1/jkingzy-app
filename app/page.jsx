@@ -5,15 +5,15 @@ import '../styles/globals.css'
 import YoutubeVids from '../src/components/UI/molecule/youtubeVids'
 import Plx from 'react-plx'
 import WelcomeBox from '../src/components/UI/molecule/welcomeBox'
-
+import ToggleNavBar from '../src/components/UI/molecule/toggleNavBar'
 export default async function Home() {
   
   return (
     
     <div  className='home-page'  >
       
+      
       <div id='video-bg'>
-        
         <VideoBg />
         
         </div>

@@ -1,12 +1,15 @@
 'use client'
 import '../styles/globals.css'
 import NavBar from '../src/components/UI/molecule/navBar'
-import {useEffect, Suspense } from 'react';
+import {useEffect, useRef  } from 'react';
 import Loading from './loading';
 import Footer from '../src/components/UI/atom/footer'
 
+
+
 export default function RootLayout({ children }) {
   useEffect(() => {(
+    
     async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
       const locomotiveScroll = new LocomotiveScroll();
@@ -18,14 +21,14 @@ export default function RootLayout({ children }) {
   return (
     
     <html lang="en">
-        <body  >
-        <NavBar />
+        <body >
+        <NavBar/>
         <div  >
-        
         {children}
-        
         </div>
-        {/* <Footer /> */}
+        <div>
+          {/* <Footer  /> */}
+        </div>
         </body>
         
         

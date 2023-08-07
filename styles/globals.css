@@ -128,8 +128,13 @@ a {
   background: #008db0;
 }
 
+.footer-container{
+  height: auto;
+  background-color: #008db0;
+  
+}
 .home-page{
-  height: 100vh;
+  height: auto;
 
 }
 
@@ -207,7 +212,7 @@ a {
 
 /*GALLERY PAGE*/
 .gallery-page{
-height:100vh;
+height:auto;
   
 }
 
@@ -266,7 +271,7 @@ height:100vh;
 }
 /*ABOUT PAGE*/
 .about-page{
-  height:100vh;
+  height:auto;
 
 }
 #parallax-effect-container{
@@ -287,7 +292,7 @@ height:100vh;
 }
 /* SPECS PAGE */
 .specs-page{
-  height: 100vh;
+  height: auto;
 }
 #specs-pc-section{
   height:auto;
@@ -343,7 +348,7 @@ height:100vh;
 
 /* WORK PAGE */ 
 .work-page{
-  height: 300vh;
+  height: auto;
 }
 
 #timeline-section{
@@ -358,7 +363,7 @@ height:100vh;
   flex-direction: row;
   gap: 20px;
   justify-content: center;
- 
+  
   
 }
 .fiverr-title{

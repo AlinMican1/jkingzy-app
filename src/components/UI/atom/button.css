@@ -129,13 +129,31 @@ border-radius: 6px;
     cursor: auto;
 }
 
-
-  @media screen and (max-width : 740px){
-    .default {
-       display: none;
-      
-    }
-    .welcome-button{
-        display: none;
-    }
+.default-toggle{
+    background-color: transparent;
+    width: 100%;
+    height: 50px;
+    
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    opacity: 1;
+    text-transform: uppercase;
+    padding: 0 10px;
+}
+.default-toggle:hover{
+    backdrop-filter: blur(10px);
+    background-color: #00a6d053
+}
+.hamburger-icon{
+    background-color: transparent;
+    width: 100%;
+    height: 50px;
+    float: right;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    opacity: 1;
+    text-transform: uppercase;
+    padding: 0 10px;
 }
