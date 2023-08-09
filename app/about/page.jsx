@@ -1,4 +1,4 @@
-'use client'
+
 import React from 'react'
 import Parallax from '../../src/components/animations/parallax'
 import '../../styles/globals.css'

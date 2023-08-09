@@ -72,20 +72,23 @@ header nav a {
 }
 
 .hamburger-toggle{
-    position: relative;
-    right: -70px;
+    position: absolute;
+    right: 60px;
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
+   
+   
+   
+    z-index: 20;
 }
-.hamburger-toggle .bar{
+.no-scroll {
+    overflow: hidden;
+  }
+/* .hamburger-toggle .bar{
     height: 3px;
     width: 100%;
     background-color: white;
     border-radius: 10px;
-}
+} */
 .button-toggle{
     display: flex;
 }
@@ -101,4 +104,5 @@ header nav a {
        
         height: 25px;
     }
+    
 }

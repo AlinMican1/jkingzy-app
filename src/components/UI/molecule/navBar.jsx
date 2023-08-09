@@ -1,4 +1,4 @@
-'use client'
+
 import React from 'react'
 import './navBar.css'
 import Button from '../atom/button'
@@ -11,7 +11,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars  } from '@fortawesome/free-solid-svg-icons';
 import {useWindowSize} from '../../../lib/SizeScreen-hook';
 const NavBar = () => {
-  const [activeButton, setActiveButton] = useState('Home');
+  const storedActiveButton = localStorage.getItem('activeButton');
+  const [activeButton, setActiveButton] = useState(storedActiveButton || 'Home');
+  const [openDropNav, setDropNav] = useState(false);
+  const[width,height] = useWindowSize();
+
   useEffect(() => {
     const headerElement = document.querySelector('header');
     
@@ -32,34 +36,53 @@ const NavBar = () => {
      
     };
   }, []); 
+  
   const handleButtonClick = (buttonText) => {
     setActiveButton(buttonText);
+    setDropNav(false);
+    localStorage.setItem('activeButton', buttonText);
   };
-  const [openDropNav, setDropNav] = useState(false);
-  const[width,height] = useWindowSize();
+  
   useEffect(()=>{
+    
       if(width >= 901){
           setDropNav(false);
       }
-  },[width])
+  },[activeButton,width])
+  useEffect(() => {
+    if (openDropNav) {
+      document.documentElement.classList.add('no-scroll');
+      document.body.classList.add('no-scroll');
+    } else {
+      document.documentElement.classList.remove('no-scroll');
+      document.body.classList.remove('no-scroll');
+    }
+  }, [openDropNav]);
     return (
+      <>
+      
     <header >
         
-       
+   
         <div className='inner-flex'>
           <Link href="/" onClick={() => handleButtonClick('Home')} >
            <div><Logo /></div>
           </Link>
           
         <nav>
-        
         <div>
             <Button btnVariant={'hamburger-icon'} btnIcon={<FontAwesomeIcon icon={faBars} />} onClick={() => setDropNav(!openDropNav)} />
-            {openDropNav && <ToggleNavBar />}
-        </div>
+            {openDropNav && <ToggleNavBar  openDropNav={openDropNav}
+              setDropNav={setDropNav}
+              activeButton={activeButton}
+              handleButtonClick={handleButtonClick}/>}
+          </div>
+            <div>
+              
+            </div>
             <div className='button-toggle'>
             <Link href="/" className='active'> 
-            <Button btnText={'Home'} btnVariant={activeButton === 'Home' ? 'default active' : 'default'}  onClick={() => handleButtonClick('Home')}/>
+            <Button btnText={'Home'} btnVariant={activeButton === 'Home' ? 'default active' : 'default'}  onClick={() =>  handleButtonClick('Home')}/>
             </Link>
             <Link href="/about" className='active'> 
             <Button btnText={'About'} btnVariant={activeButton === 'About' ? 'default active' : 'default'}  onClick={() => handleButtonClick('About')}/>
@@ -77,7 +100,7 @@ const NavBar = () => {
         </nav>
         </div>
     </header>
-
+    </>
   
   )
 }

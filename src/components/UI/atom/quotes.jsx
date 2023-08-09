@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import './quotes.css'
 import Plx from 'react-plx'
