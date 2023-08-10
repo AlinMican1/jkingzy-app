@@ -4,7 +4,9 @@ import Parallax from '../../src/components/animations/parallax'
 import background from '../../src/assets/work_background.jpg'
 import transparent from '../../src/assets/transparent.png'
 import Timeline from '../../src/components/UI/atom/timeline'
+
 import fiverr1 from '../../src/assets/fiver1T.mp4'
+
 import fiverr2 from '../../src/assets/fiverr2.mp4'
 import Plx from 'react-plx'
 
