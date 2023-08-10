@@ -4,9 +4,10 @@ import Parallax from '../../src/components/animations/parallax'
 import background from '../../src/assets/work_background.jpg'
 import transparent from '../../src/assets/transparent.png'
 import Timeline from '../../src/components/UI/atom/timeline'
-import SpecVideo from '../../src/components/UI/atom/specVideo'
+import fiverr1 from '../../src/assets/fiver1T.mp4'
+import fiverr2 from '../../src/assets/fiverr2.mp4'
 import Plx from 'react-plx'
-import video from '../../src/assets/trailer.mp4'
+
 import '../../styles/globals.css'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -66,18 +67,20 @@ const Work = () => {
         <motion.div initial={"offscreen"} whileInView={'onscreen'} viewport={{once:true}} variants={VideoAnimation} id='fiverr-videos'>
         <div>
         <video className='fiverr-video-player'  style={{ border: '2px solid #00A8D0' }} controls>
-          <source src={video} type="video/mp4" />
+          <source src={fiverr1} type="video/mp4" />
         </video>
         </div>
         <div>
         <video className='fiverr-video-player'  style={{ border: '2px solid #00A8D0' }} controls>
-          <source src={video} type="video/mp4" />
+          <source src={fiverr2} type="video/mp4" />
         </video>
         </div>
         </motion.div>
         <div className='video-footer'>
           <h1>Do you want your own edit?</h1>
           <p>Get in contact <Link className='custom-fiverr-link' href={"https://www.fiverr.com/thekingzace"}> Fiverr</Link></p>
+          <p className='custom-p'>Or</p>
+          <p>Free Cinematic <Link className='custom-fiverr-link' href={"https://drive.google.com/drive/folders/1NqlmGmS_eFbOyi8VXlb0JomiPaWeXaLg?usp=sharing"}> Clips</Link></p>
         </div>
     </div>
     

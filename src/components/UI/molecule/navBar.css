@@ -1,15 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&family=Poppins:wght@600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
- .line{
-    position: absolute;
-    width: 100%;
-    height: 35px;
-    z-index: -2; 
-    /* background-color: #ffffff; */
-    background-image: url("../../../../public/trianglify-lowres.png");
-    top: -5px;
-    outline: solid black 1px;
-    
-} 
 
 header {
     position: fixed;
@@ -80,9 +69,13 @@ header nav a {
    
     z-index: 20;
 }
+/* .welcome-box-wrapper{
+    display: none;
+} */
 .no-scroll {
     overflow: hidden;
   }
+
 /* .hamburger-toggle .bar{
     height: 3px;
     width: 100%;

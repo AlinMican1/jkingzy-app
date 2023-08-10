@@ -1,7 +1,7 @@
 'use client'
 import '../styles/globals.css'
 import NavBar from '../src/components/UI/molecule/navBar'
-import {useEffect, useRef  } from 'react';
+import {useEffect, useRef, Suspense  } from 'react';
 import Loading from './loading';
 import Footer from '../src/components/UI/atom/footer'
 
@@ -21,14 +21,19 @@ export default function RootLayout({ children }) {
   return (
     
     <html lang="en">
+       
         <body >
+        
         <NavBar/>
         <div  >
+        
         {children}
+        
         </div>
         <div>
-          {/* <Footer  /> */}
+          <Footer  />
         </div>
+      
         </body>
         
         

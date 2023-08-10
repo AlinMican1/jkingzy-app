@@ -1,4 +1,3 @@
-
 import React from 'react'
 import './navBar.css'
 import Button from '../atom/button'
@@ -10,12 +9,22 @@ import ToggleNavBar from './toggleNavBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars  } from '@fortawesome/free-solid-svg-icons';
 import {useWindowSize} from '../../../lib/SizeScreen-hook';
-const NavBar = () => {
-  const storedActiveButton = localStorage.getItem('activeButton');
-  const [activeButton, setActiveButton] = useState(storedActiveButton || 'Home');
-  const [openDropNav, setDropNav] = useState(false);
-  const[width,height] = useWindowSize();
+import WelcomeBox from './welcomeBox'
 
+const NavBar = () => {
+  const [activeButton, setActiveButton] = useState(null);
+  const [openDropNav, setDropNav] = useState(false);
+  const [width, height] = useWindowSize();
+  
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Access localStorage only on the client side
+      const storedActiveButton = localStorage.getItem('activeButton');
+      setActiveButton(storedActiveButton || 'Home');
+    }
+  }, []);
+  
   useEffect(() => {
     const headerElement = document.querySelector('header');
     
@@ -42,6 +51,8 @@ const NavBar = () => {
     setDropNav(false);
     localStorage.setItem('activeButton', buttonText);
   };
+
+  
   
   useEffect(()=>{
     
@@ -58,12 +69,17 @@ const NavBar = () => {
       document.body.classList.remove('no-scroll');
     }
   }, [openDropNav]);
+    
+    
+ 
     return (
-      <>
+      
       
     <header >
         
-   
+            
+        
+       
         <div className='inner-flex'>
           <Link href="/" onClick={() => handleButtonClick('Home')} >
            <div><Logo /></div>
@@ -77,12 +93,10 @@ const NavBar = () => {
               activeButton={activeButton}
               handleButtonClick={handleButtonClick}/>}
           </div>
-            <div>
-              
-            </div>
+  
             <div className='button-toggle'>
             <Link href="/" className='active'> 
-            <Button btnText={'Home'} btnVariant={activeButton === 'Home' ? 'default active' : 'default'}  onClick={() =>  handleButtonClick('Home')}/>
+            <Button btnText={'Home'} btnVariant={activeButton === 'Home' ? 'default active' : 'default'}  onClick={() =>   handleButtonClick('Home')}/>
             </Link>
             <Link href="/about" className='active'> 
             <Button btnText={'About'} btnVariant={activeButton === 'About' ? 'default active' : 'default'}  onClick={() => handleButtonClick('About')}/>
@@ -99,8 +113,9 @@ const NavBar = () => {
             </div>
         </nav>
         </div>
+        
     </header>
-    </>
+    
   
   )
 }

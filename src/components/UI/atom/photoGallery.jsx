@@ -1,6 +1,12 @@
 'use client'
 import React from 'react'
 import plane1 from '../../../assets/plane1.jpg'
+import planePhoto1 from '../../../assets/planePhoto1.jpg'
+import planePhoto2 from '../../../assets/planePhoto2.jpg'
+import planePhoto3 from '../../../assets/planePhoto3.jpg'
+import planePhoto4 from '../../../assets/planePhoto4.jpg'
+import planePhoto5 from '../../../assets/planePhoto5.jpg'
+import planePhoto6 from '../../../assets/planePhoto6.png'
 import Image from 'next/image'
 import './photoGallery.css'
 import Link from 'next/link'
@@ -47,32 +53,32 @@ const PhotoGallery = () => {
         <div className='gallery-wrapper'>
             <div className='gallery-item'>
                 
-                <Image className='photo-gallery-image' src={plane1} alt=''/>
+                <Image className='photo-gallery-image' src={planePhoto1} alt=''/>
                  
             </div>
             <div className='gallery-item'>
               
-                <Image className='photo-gallery-image' src={plane1} alt=''/>
+                <Image className='photo-gallery-image' src={planePhoto2} alt=''/>
                
             </div>
             <div className='gallery-item'>
               
-                <Image className='photo-gallery-image' src={plane1} alt=''/>
+                <Image className='photo-gallery-image' src={planePhoto3} alt=''/>
                 
             </div>
             <div className='gallery-item'>
               
-                <Image className='photo-gallery-image' src={plane1} alt=''/>
+                <Image className='photo-gallery-image' src={planePhoto4} alt=''/>
               
             </div>
             <div className='gallery-item'>
             
-                <Image className='photo-gallery-image' src={plane1} alt=''/>
+                <Image className='photo-gallery-image' src={planePhoto5} alt=''/>
                 
             </div>
             <div className='gallery-item'>
             
-                <Image className='photo-gallery-image' src={plane1} alt=''/>
+                <Image className='photo-gallery-image' src={planePhoto6} alt=''/>
                 
             </div>
         </div>

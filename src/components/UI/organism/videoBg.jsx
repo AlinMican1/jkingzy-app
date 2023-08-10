@@ -1,8 +1,8 @@
 'use client'
 import React from 'react'
 import './videoBg.css'
-import trailer from '../../../assets/trailer.mp4'
-import Button from '../atom/button'
+import trailer from '../../../assets/trailer2.mp4'
+
 import ContentBox from '../molecule/contentBox'
 import YoutubeVids from '../molecule/youtubeVids'
 import { useRef , useEffect } from 'react'
@@ -52,10 +52,10 @@ const VideoBg = () => {
             }
           ]}
             >
-            {/* <div className='video-title'>
-            <h1 className='video-title-text' >KingzAce <br/><p > Avitation </p> </h1>
+            <div className='video-title'>
+            <h1 className='video-title-text' >KingzAce <br/><p > Aviation </p> </h1>
             
-            </div>  */}
+            </div> 
             </Plx>
           
             
