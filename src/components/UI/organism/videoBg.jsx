@@ -11,7 +11,7 @@ const VideoBg = () => {
     <div className='video-container'>
               
             <video autoPlay loop muted >
-              <source src={trailer}  type="video/mp4" />
+              <source src={'../../../../public/test.mp4'}  type="video/mp4" />
             </video >
             
             
