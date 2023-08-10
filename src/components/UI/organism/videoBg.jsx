@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import './videoBg.css'
-import trailer from '../../../assets/test.mp4'
+import trailer from '../../../../public/test.mp4'
 
 import Plx from 'react-plx'
 
@@ -11,8 +11,11 @@ const VideoBg = () => {
     <div className='video-container'>
               
             <video autoPlay loop muted >
-            <source src={trailer} type="video/mp4" />
-            </video>
+              <source src={trailer}  type="video/mp4" />
+            </video >
+            
+            
+          
             <div className='video-overlay' />
             
             <Plx
