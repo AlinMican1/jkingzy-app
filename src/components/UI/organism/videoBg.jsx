@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import './videoBg.css'
-import trailer from '../../../assets/trailer2.mp4'
+import trailer from '../../../assets/test.mp4'
 
 import Plx from 'react-plx'
 
