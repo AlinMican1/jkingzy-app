@@ -5,7 +5,7 @@ import trailer from '../../../../public/test.mp4'
 
 // import Plx from 'react-plx'
 
-const VideoBg = () => {
+export async function VideoBg () {
 
   return (
     <div className='video-container'>
