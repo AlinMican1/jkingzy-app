@@ -51,9 +51,9 @@ const Footer = () => {
   <li>
   <p><FontAwesomeIcon icon={faEnvelope} style={{color: "#ffffff",}} /> thekingzacebusiness@gmail.com</p>
   </li>
-  <li>
+  {/* <li>
   <p><FontAwesomeIcon icon={faLinkedin} style={{color: "#ffffff",}} /> www.linkedin.com/in/joshua-king-66651522b/</p>
-  </li>
+  </li> */}
   <li>
    <p>Fiverr: @thekingzace</p>
   </li>
@@ -65,7 +65,7 @@ const Footer = () => {
 
   </div>
    <p>Copyright &copy; 2023 TheKingzAce</p>
-   <p> Made with ❤️ by Alin</p>
+   <p>Made with ❤️ by Alin</p>
 </div>
 </footer>
         

@@ -3,9 +3,6 @@ import React from 'react'
 import './videoBg.css'
 import trailer from '../../../assets/trailer2.mp4'
 
-
-
-
 import Plx from 'react-plx'
 
 const VideoBg = () => {
@@ -13,7 +10,7 @@ const VideoBg = () => {
   return (
     <div className='video-container'>
               
-            <video  src={"https://archive.org/download/Popeye_forPresident/Popeye_forPresident_512kb.mp4"} autoPlay loop muted type="video/mp4"/>
+            <video src={trailer} autoPlay loop muted />
             
             <div className='video-overlay' />
             
