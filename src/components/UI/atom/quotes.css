@@ -21,12 +21,12 @@
 }
 .quotes-wrapper  p {
     font-size: 18px;
-    text-align: center; /* Center the text horizontally */
-    display: flex; /* Enable flexbox layout for centering */
-    align-items: center; /* Center the text vertically */
-    margin: 0; /* Remove any default margin */
+    text-align: center; 
+    display: flex; 
+    align-items: center; 
+    margin: 0; 
     
-    width: 100%; /* Ensures the text takes up the full width of the box */
+    width: 100%; 
     word-wrap: break-word; 
     overflow-wrap: break-word;
     backface-visibility: hidden;
@@ -78,17 +78,17 @@
 }
 @media (max-width: 800px) {
     .quotes-wrapper {
-      flex-direction: column; /* Display boxes vertically */
-      height: auto; /* Allow height to adjust based on content */
+      flex-direction: column; 
+      height: auto; 
       gap:3vw
     }
     
     #box-one,
     #box-two,
     #box-three {
-      width: 80%; /* Take up full width of the container */
-      height: 100px; /* Allow height to adjust based on content */
-      margin-bottom: 20px; /* Add some margin for spacing between boxes */
+      width: 80%; 
+      height: 100px; 
+      margin-bottom: 20px;
     }
 
     .quotes-wrapper  p {

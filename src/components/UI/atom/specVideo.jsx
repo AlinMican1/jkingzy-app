@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import './specVideo.css'
-import {motion, Variants} from 'framer-motion'
+import {motion} from 'framer-motion'
 import { Container } from 'react-bootstrap';
 
 const SpecVideo = ({video}) => {

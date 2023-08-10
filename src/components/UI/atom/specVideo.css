@@ -1,7 +1,7 @@
 .spec-video-container {
     width: 80%;
     position: relative;
-    padding-bottom: 40%; /* Aspect ratio of 16:9 (9/16 = 0.5625) */
+    padding-bottom: 40%; 
     margin: 0 auto;
     margin-top: -10px;
     
@@ -22,7 +22,7 @@
     .spec-video-container {
         width: 90%;
         position: relative;
-        padding-bottom: 80%; /* Aspect ratio of 16:9 (9/16 = 0.5625) */
+        padding-bottom: 80%;
         margin: 0 auto;
         margin-top: -10px;
        

@@ -8,7 +8,7 @@ const ImageSlider = ({images}) => {
     const [current, setCurrent] = useState(0);
     let timeOut = null
     useEffect(() => {
-        // Clear the existing timeout before setting a new one
+        
         clearTimeout(timeOut);
     
         if (autoPlay) {
@@ -17,7 +17,7 @@ const ImageSlider = ({images}) => {
           }, 5000);
         }
     
-        // Cleanup function
+        
         return () => {
           clearTimeout(timeOut);
         };
@@ -32,8 +32,7 @@ const ImageSlider = ({images}) => {
       };
     
     return (
-        /* SET AUTOPLAY ON MOUSE ENTER put in the first div tag*/
-        /*onMouseEnter={() => {setAutoPlay(false); clearTimeout(timeOut)}} onMouseLeave={() => {setAutoPlay(true);}}*/
+       
     <div className='carousel'>
         <div className='carousel-wrapper'>
             {images.map((image, index) =>{

@@ -3,8 +3,7 @@
 button{
     border: 0;
     cursor: pointer;
-    /* display: inline-block; */
-    /* line-height: 1; */
+    
 }
 
 .default{
@@ -18,10 +17,7 @@ button{
     opacity: 1;
     text-transform: uppercase;
     padding: 0 10px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -50px; */
+    
 }
 .default::after {
     content: "";
@@ -36,7 +32,7 @@ button{
     
 }
 
-/* On hover, expand the line to 100% width */
+
 .default:hover::after {
     width: 80%;
     
@@ -143,7 +139,7 @@ border-radius: 6px;
     margin-left: 40%;
     transition: .2s all;
     
-    /* transform: translate(-50%, -50%); */
+    
 }
 
 .default-toggle:hover{
@@ -168,7 +164,7 @@ border-radius: 6px;
 }
 .hamburger-icon{
     background-color: transparent;
-    /* width: 100%; */
+    
     height: 50px;
     float: right;
     color: rgb(255, 255, 255);

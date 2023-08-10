@@ -1,9 +1,7 @@
 'use client'
 import React from 'react'
 import './quotes.css'
-import Plx from 'react-plx'
-import Image from 'next/image'
-import test from '../../../../styles/niceBg.jpg'
+
 
 import { useEffect } from 'react'
 
@@ -19,7 +17,7 @@ const Quotes = () => {
   return (
     <div className='quotes-wrapper'>
     
-        {/* <Image src={test} alt=''/>   */}
+        
         <div data-scroll data-scroll-speed ='-0.08' id='box-one'>
             <p>“A 'good' landing is one from which you can walk away. A 'great' landing is one after which they can use the plane again.” - Gerald R. Massie</p>
         </div>

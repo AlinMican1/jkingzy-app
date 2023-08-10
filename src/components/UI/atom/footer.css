@@ -52,7 +52,7 @@ footer {
     margin: 0;
   }
   li:not(:first-child) {
-    /* margin-top: 0.8em; */
+    
   }
   ul li a {
     color: #a7a7a7;

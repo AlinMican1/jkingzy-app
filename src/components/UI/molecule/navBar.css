@@ -24,17 +24,17 @@ header .inner-flex {
     
 }
 header nav {
-    display: flex; /* Make the navigation items a flex container */
-    align-items: center; /* Center the buttons vertically */
+    display: flex; 
+    align-items: center; 
     
 }
 
 header nav a {
-     /* Adjust the spacing between buttons as needed */
+     
     text-decoration: none;
-    color: #000; /* Adjust the color of the button text */
+    color: #000; 
     font-family: 'Poppins';
-    position: relative; /* Add position relative to the anchor element */
+    position: relative; 
     display: inline-block;
     
 }
@@ -69,19 +69,12 @@ header nav a {
    
     z-index: 20;
 }
-/* .welcome-box-wrapper{
-    display: none;
-} */
+
 .no-scroll {
     overflow: hidden;
   }
 
-/* .hamburger-toggle .bar{
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-} */
+
 .button-toggle{
     display: flex;
 }

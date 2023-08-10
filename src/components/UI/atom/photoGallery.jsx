@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import plane1 from '../../../assets/plane1.jpg'
 import planePhoto1 from '../../../assets/planePhoto1.jpg'
 import planePhoto2 from '../../../assets/planePhoto2.jpg'
 import planePhoto3 from '../../../assets/planePhoto3.jpg'

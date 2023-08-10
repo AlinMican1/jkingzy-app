@@ -2,11 +2,9 @@
 import VideoBg from '../src/components/UI/organism/videoBg'
 import ContentBox from '../src/components/UI/molecule/contentBox'
 import '../styles/globals.css'
-import YoutubeVids from '../src/components/UI/molecule/youtubeVids'
 import Plx from 'react-plx'
 import WelcomeBox from '../src/components/UI/molecule/welcomeBox'
-import ToggleNavBar from '../src/components/UI/molecule/toggleNavBar'
-import { Suspense } from 'react'
+import YoutubeVids from '../src/components/UI/molecule/youtubeVids'
 
 export default async function Home() {
   
@@ -65,7 +63,7 @@ export default async function Home() {
               </Plx>
             </div>
             </Plx>
-              {/* <YoutubeVids  /> */}
+              <YoutubeVids  />
           
         </div>
       <div id='content-box-place'>
