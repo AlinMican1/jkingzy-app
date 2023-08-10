@@ -65,7 +65,7 @@ export default async function Home() {
               </Plx>
             </div>
             </Plx>
-              <YoutubeVids  />
+              {/* <YoutubeVids  /> */}
           
         </div>
       <div id='content-box-place'>

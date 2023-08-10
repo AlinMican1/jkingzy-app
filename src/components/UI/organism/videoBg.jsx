@@ -10,9 +10,8 @@ const VideoBg = () => {
   return (
     <div className='video-container'>
               
-            <video autoPlay loop muted >
-              <source src={'../../../../public/test.mp4'}  type="video/mp4" />
-            </video >
+            <video src="/test.mp4" autoPlay loop muted type="video/mp4" />
+            
             
             
           
