@@ -1,8 +1,8 @@
 'use client'
 import React from 'react'
 import './videoBg.css'
-import trailer from '../../../assets/trailer.mp4'
-import Button from '../atom/button'
+import trailer from '../../../assets/trailer2.mp4'
+
 import ContentBox from '../molecule/contentBox'
 import YoutubeVids from '../molecule/youtubeVids'
 import { useRef , useEffect } from 'react'
