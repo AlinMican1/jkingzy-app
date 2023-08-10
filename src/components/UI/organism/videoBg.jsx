@@ -10,8 +10,9 @@ const VideoBg = () => {
   return (
     <div className='video-container'>
               
-            <video src={trailer} autoPlay loop muted />
-            
+            <video autoPlay loop muted >
+            <source src={trailer} type="video/mp4" />
+            </video>
             <div className='video-overlay' />
             
             <Plx
