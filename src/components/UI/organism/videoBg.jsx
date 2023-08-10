@@ -52,10 +52,10 @@ const VideoBg = () => {
             }
           ]}
             >
-            {/* <div className='video-title'>
-            <h1 className='video-title-text' >KingzAce <br/><p > Avitation </p> </h1>
+            <div className='video-title'>
+            <h1 className='video-title-text' >KingzAce <br/><p > Aviation </p> </h1>
             
-            </div>  */}
+            </div> 
             </Plx>
           
             

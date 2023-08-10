@@ -15,7 +15,6 @@ footer {
   }
   .row.primary {
     display: grid;
-    
     grid-template-columns:1fr 1fr  1fr 1fr ;
     align-items: stretch; 
   }
@@ -28,7 +27,14 @@ footer {
     margin: auto;
     text-align: center;
   }
-  
+  .links li p{
+    font-size: 15px;
+    
+  }
+  .links li {
+    margin-top: -5px;
+
+  }
   h3 {
     width: 100%;
     text-align: left;
@@ -46,7 +52,7 @@ footer {
     margin: 0;
   }
   li:not(:first-child) {
-    margin-top: 0.8em;
+    /* margin-top: 0.8em; */
   }
   ul li a {
     color: #a7a7a7;
@@ -55,6 +61,7 @@ footer {
   ul li a:hover {
     color: #2a8ded;
   }
+  
   .about p {
     text-align: justify;
     line-height: 2;
@@ -98,10 +105,25 @@ footer {
   .links p{
     font-size: 20px;
   }
-  @media screen and (max-width: 850px) {
+  @media (max-width: 850px) {
     .row.primary {
       grid-template-columns: 1fr;
     }
+    
+  }
+@media (max-width:1410px){
   
+  .links li {
+    margin-top: 0px;
+
+  }
+}
+
+@media (max-width:384px){
+  
+  .links li p{
+    font-size: 13px;
+    
   }
   
+}

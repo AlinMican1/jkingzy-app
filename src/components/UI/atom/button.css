@@ -218,3 +218,20 @@ border-radius: 6px;
        
     }
 }
+@media (max-width: 1065px){
+    .find-out-button{
+       
+        font-size: 18px;
+      
+       
+    }
+}
+@media (max-width:480px){
+    
+    .find-out-button{
+       
+        font-size: 15px;
+        width: 41vw;
+       
+    }
+} 

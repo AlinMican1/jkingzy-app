@@ -236,7 +236,7 @@
 @media screen and (max-width: 630px){
   .videoArray {
     
-    width: 80vw;
+    width: 90vw;
     grid-template-areas:
       "video1 "
       "video2 "

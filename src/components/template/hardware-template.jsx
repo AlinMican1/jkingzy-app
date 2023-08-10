@@ -12,7 +12,8 @@ import '../UI/molecule/contentBox.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faYoutube} from '@fortawesome/free-brands-svg-icons'
 import Link from 'next/link'
-
+import PheripheralPic from '../../assets/peripheralPic.jpg'
+import DesktopPc from '../../assets/DesktopPc.jpg'
 const SpecsPage = () => {
   const AnimatePicture ={
     offscreen:{ opacity: 0, scale: 0.5 },
@@ -39,10 +40,10 @@ const SpecsPage = () => {
       <Parallax backgroundSrc={background} foreground1Src={transparent} foreground2Src={transparent} titleTxt={'Hardware'}/>
       <motion.div initial={"offscreen"} whileInView={'onscreen'} viewport={{once:true}} variants={AnimatePicture} id="specs-pc-section">
         <SpecBox title="Desktop ✈" items={DesktopSpecs} />
-        <Image className='spec-image' src={background} alt='' />
+        <Image className='spec-image' src={DesktopPc} alt='' />
       </motion.div>
       <motion.div initial={"offscreen"} whileInView={'onscreen'} viewport={{once:true}} variants={AnimatePicture} id="specs-pc-section2">
-        <Image className='spec-image2' src={background} alt='' />
+        <Image className='spec-image2' src={PheripheralPic} alt='' />
         <SpecBox title="Peripherals ✈" items={PeripheralsSpecs} />
       </motion.div>
       <div id='specs-pc-video'>
