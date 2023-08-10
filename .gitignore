@@ -33,3 +33,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#ignore the videos
+*.mp4
+*.zip
+*.mov
+# Local Netlify folder
+.netlify

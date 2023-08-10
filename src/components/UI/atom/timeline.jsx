@@ -40,84 +40,28 @@ const Timeline = () => {
     
       useEffect(() => {
         // Define a function to calculate the plane's position based on the scrollY value
+        const timelineSection = document.querySelector('.timeline-items');
+        const height = timelineSection.clientHeight;
+        
         const calculatePlanePosition = () => {
             //Adjust plane movement based on size
-          if(windowDimension.winWidth > 1142){
-            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
-            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1100); // Map scrollY to 0-100%
-            setPlanePosition(newPosition);
-            
-          }
-          else if(windowDimension.winWidth >= 949 && windowDimension.winWidth < 1143){
-            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
-            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1125); // Map scrollY to 0-100%
-            setPlanePosition(newPosition);
-            
-            
-          }
-          else if(windowDimension.winWidth > 890 && windowDimension.winWidth < 949){
-            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
-            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1200); // Map scrollY to 0-100%
-            setPlanePosition(newPosition);
-            
-          }
-          else if(windowDimension.winWidth > 795 && windowDimension.winWidth <= 890){
-            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
-            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1205); // Map scrollY to 0-100%
-            setPlanePosition(newPosition);
-            
-          }
-          else if(windowDimension.winWidth > 767 && windowDimension.winWidth <= 795){
-            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
-            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1230); // Map scrollY to 0-100%
-            setPlanePosition(newPosition);
-            
-          }
-          else if(windowDimension.winWidth > 500 && windowDimension.winWidth <= 649){
-            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
-            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1120); // Map scrollY to 0-100%
-            setPlanePosition(newPosition);
-            
-          }
-          else if(windowDimension.winWidth > 472 && windowDimension.winWidth <= 500){
-            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
-            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1200); // Map scrollY to 0-100%
-            setPlanePosition(newPosition);
+            if(windowDimension.winWidth < 767){
+              const factor = 0.8; // Calculate the factor to map scrollY to 0-100%
+              const viewportHeight = window.innerHeight;
+              const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), height); // Map scrollY to 0-100%
+              setPlanePosition(newPosition);
+            }
+            else{
+              const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
+              const viewportHeight = window.innerHeight;
+              const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), height); // Map scrollY to 0-100%
+              setPlanePosition(newPosition);
+              
+            }
            
-          }
-          else if(windowDimension.winWidth > 400 && windowDimension.winWidth <= 472){
-            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
-            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1205); // Map scrollY to 0-100%
-            setPlanePosition(newPosition);
-            
-          }
-          else if(windowDimension.winWidth > 390 && windowDimension.winWidth <= 400){
-            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
-            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1310); // Map scrollY to 0-100%
-            setPlanePosition(newPosition);
-            
-          }
-          else if(windowDimension.winWidth > 375 && windowDimension.winWidth <= 390){
-            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
-            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1320); // Map scrollY to 0-100%
-            setPlanePosition(newPosition);
-            
-          }
-          else if(windowDimension.winWidth > 0 && windowDimension.winWidth <= 375){
-            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
-            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1300); // Map scrollY to 0-100%
-            setPlanePosition(newPosition);
-            
-          }
-          
-          else{
-            const factor = 0.7; // Calculate the factor to map scrollY to 0-100%
-            const newPosition = Math.min(Math.max((scrollY - 125) * factor, 0), 1050); // Map scrollY to 0-100%
-            setPlanePosition(newPosition);
-            
-          }
+       
         
-        };
+         };
     
         calculatePlanePosition();
       }, [scrollY]);
@@ -148,35 +92,41 @@ const Timeline = () => {
           </div>
 		<motion.div  initial={"offscreen"} whileInView={'onscreen'} viewport={{once:true}} variants={AnimateBox} className="timeline-item">
 			<div className="timeline-dot"></div>
-			<div className="timeline-date">Fiverr</div>
+			<div className="timeline-date">2020</div>
 			<div className="timeline-content">
-				<h3>My Fiverr Account</h3>
-				<p>I create small edits based on pricing bla bla bla bla asdasdgsa gasdg aga sgdas gasgd asg asgas gdasdg asg asdg asg asg sagd aas as gag gsaga gsdg asg . </p>
-                <Link className='find-more-link' href="https://www.youtube.com/watch?v=L9W33EuGjoY&t=114s"> Find out more </Link> 
+				<h3>Youtube</h3>
+				<p>I started YouTube in 2020 during the Covid 19 pandemic for where I made tutorial videos for people on X-Plane 11. </p>
+                <Link className='find-more-link' href="https://www.youtube.com/@TheKingzAce"> Find out more </Link> 
 			</div>
 		</motion.div>
 		<motion.div initial={"offscreen"} whileInView={'onscreen'} viewport={{once:true}} variants={AnimateBox} className="timeline-item">
 			<div className="timeline-dot"></div>
-			<div className="timeline-date">Youtube</div>
+			<div className="timeline-date">2021</div>
 			<div className="timeline-content">
-				<h3>timeline item title</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+				<h3>Flight attendant </h3>
+				<p>I completed my mechanical engineering college course and begun my Private Pilot Licence training. But to gather information about becoming a pilot I applied for the role of a flight attendant with Ryanair. 
+           </p>
 			</div>
 		</motion.div>
 		<motion.div initial={"offscreen"} whileInView={'onscreen'} viewport={{once:true}} variants={AnimateBox} className="timeline-item">
 			<div className="timeline-dot"></div>
-			<div className="timeline-date">Flight-attendant</div>
+			<div className="timeline-date">2022</div>
 			<div className="timeline-content">
-				<h3>timeline item title</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-			</div>
+				<h3>TikTok</h3>
+				<p>I launched a TikTok page and people loved what I made gaining 100k followers within 5 
+          months on the new social media platform and became recognized by major airline companies such as EastJet, Swiss and Lufthansa. </p>
+          <Link className='find-more-link' href="https://www.tiktok.com/@thekingzace"> Find out more </Link>
+      </div>
 		</motion.div>
 		<motion.div initial={"offscreen"} whileInView={'onscreen'} viewport={{once:true}} variants={AnimateBox} className="timeline-item">
 			<div className="timeline-dot"></div>
-			<div className="timeline-date">2018</div>
+			<div className="timeline-date">2023</div>
 			<div className="timeline-content">
-				<h3>timeline item title</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+				<h3>Fiverr</h3>
+				<p> I launched a small business on fiverr to help those who look for cinematic but cannot make them maybe due to pc limitations. In addition, 
+          I would like to help the official launch of my friends Unique clothing brand called icarus_clo. </p>
+          <Link className='find-more-link' href="https://www.fiverr.com/thekingzace"> More about my Fiverr </Link> <br/>
+          <Link className='find-more-link' href="https://www.instagram.com/icarus_clo/"> More about Icarus </Link>
 			</div>
 		</motion.div>
 		

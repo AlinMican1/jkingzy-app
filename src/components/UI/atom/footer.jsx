@@ -2,7 +2,7 @@ import React from 'react'
 import './footer.css'
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faEnvelope  } from '@fortawesome/free-solid-svg-icons';
-import { faYoutube, faTiktok , faInstagram} from '@fortawesome/free-brands-svg-icons'
+import { faYoutube, faTiktok , faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 
 import Link from 'next/link'
 
@@ -52,6 +52,9 @@ const Footer = () => {
   <p><FontAwesomeIcon icon={faEnvelope} style={{color: "#ffffff",}} /> thekingzacebusiness@gmail.com</p>
   </li>
   <li>
+  <p><FontAwesomeIcon icon={faLinkedin} style={{color: "#ffffff",}} /> www.linkedin.com/in/joshua-king-66651522b/</p>
+  </li>
+  <li>
    <p>Fiverr: @thekingzace</p>
   </li>
  </ul>
@@ -62,6 +65,7 @@ const Footer = () => {
 
   </div>
    <p>Copyright &copy; 2023 TheKingzAce</p>
+   <p> Made with ❤️ by Alin</p>
 </div>
 </footer>
         

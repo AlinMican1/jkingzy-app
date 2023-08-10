@@ -1,8 +1,9 @@
-import React from 'react'
-
+import React from "react"
+import '../../styles/globals.css'
 export default function Loading () {
   return (
-    <h1>LOADING.....</h1>
+    <div className="loading-container">
+    <h1 className="loading-header">LOADING.....</h1>
+    </div>
   )
 }
-

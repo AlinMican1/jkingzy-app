@@ -25,6 +25,10 @@
     shape-outside: polygon(55% 0, 100% 0%, 100% 100%, 33% 100%);
     shape-margin: 20px;
     clip-path: polygon(55% 0, 100% 0%, 100% 100%, 33% 100%);
+    
+}
+.shaped-title{
+    color: #00A8D0;
 }
 .about-description-phone{
     width: 100%;
@@ -42,20 +46,20 @@
 }
 .about-description-desktop h1{
     font-size: 60px;
-    color: rgb(53, 107, 154);
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 .about-description-desktop p{
-    padding: 3vw;
+    padding: 2vw;
     padding-left: 2vw;
     padding-left: 2vw;
     font-size: 20px;
-    color: rgb(53, 107, 154);
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 .about-description-phone h1{
     font-size: 60px;
-    color: rgb(53, 107, 154);
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 .about-description-phone p{
@@ -64,7 +68,7 @@
     padding-left: 2vw;
     padding-left: 2vw;
     font-size: 20px;
-    color: rgb(53, 107, 154);
+    color: rgb(255, 255, 255);
     text-align: center;
   
 }

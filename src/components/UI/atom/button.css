@@ -131,23 +131,44 @@ border-radius: 6px;
 
 .default-toggle{
     background-color: transparent;
-    width: 100%;
+    width: 100vw;
     height: 50px;
-    
     color: rgb(255, 255, 255);
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
     opacity: 1;
     text-transform: uppercase;
     padding: 0 10px;
+    text-align: left;
+    margin-left: 40%;
+    transition: .2s all;
+    
+    /* transform: translate(-50%, -50%); */
 }
+
 .default-toggle:hover{
-    backdrop-filter: blur(10px);
-    background-color: #00a6d053
+    transition: .2s all;
+    transform: scale(1.1);
+    color: #00A8D0;
+}
+
+.active-toggle{
+    color: #00A8D0;
+    font-size: 20px;
+    transform: scale(1.1);
+}
+
+
+
+.button-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
 }
 .hamburger-icon{
     background-color: transparent;
-    width: 100%;
+    /* width: 100%; */
     height: 50px;
     float: right;
     color: rgb(255, 255, 255);
@@ -155,5 +176,62 @@ border-radius: 6px;
     font-family: 'Poppins', sans-serif;
     opacity: 1;
     text-transform: uppercase;
-    padding: 0 10px;
+   
+    padding-top: 10px;
+    margin-right: -50px;
+    display: none;
+    transition: .2s;
 }
+.hamburger-icon:hover{
+    color: #00A8D0;
+    transition: .2s;
+}
+@media (max-width: 901px){
+    .hamburger-icon{
+        display: flex;
+        
+    }
+}
+@media (max-width: 500px){
+    .default-toggle{
+       
+        margin-left: 30%;
+       
+    }
+}
+
+@media (max-width:700px){
+    .find-out-button{
+        width: 40vw;
+        height: 50px;
+        font-size: 15px;
+      
+       
+    }
+}
+@media (max-width:400px){
+    .find-out-button{
+        width: 40vw;
+        height: 50px;
+        font-size: 13px;
+      
+       
+    }
+}
+@media (max-width: 1065px){
+    .find-out-button{
+       
+        font-size: 18px;
+      
+       
+    }
+}
+@media (max-width:480px){
+    
+    .find-out-button{
+       
+        font-size: 15px;
+        width: 41vw;
+       
+    }
+} 

@@ -64,8 +64,8 @@ video{
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-	text-fill-color: transparent;
-    z-index: -1000;
+	
+    
 }
  .video-overlay{
     position: absolute;
@@ -84,6 +84,20 @@ video{
         
     }
     .video-title{
-        display: none;
+       
+        width: 100%; 
+        
+    } 
+} 
+@media (min-width:700px) and (max-width : 710px){
+    .video-container{
+        width: 100%;
+        object-fit: contain;
+        
     }
+    .video-title{
+       
+        width: 90%; 
+        
+    } 
 } 

@@ -5,20 +5,32 @@ import './imageSlider.css'
 import Plx from 'react-plx'
 const ImageSlider = ({images}) => {
     const[autoPlay,setAutoPlay] = useState(true);
+    const [current, setCurrent] = useState(0);
     let timeOut = null
-    useEffect(() =>{
-        timeOut = autoPlay && setTimeout(() => {
+    useEffect(() => {
+        // Clear the existing timeout before setting a new one
+        clearTimeout(timeOut);
+    
+        if (autoPlay) {
+          timeOut = setTimeout(() => {
             slideRight();
-        },5000)
-    })
-    const[current,setCurrent] = useState(0)
-    const slideRight = () =>{
-        setCurrent(current === images.length -1 ? 0 : current + 1)
-        
-    }
-    const slideLeft = () =>{
-        setCurrent(current === 0 ? images.length - 1 : current - 1)
-    }
+          }, 5000);
+        }
+    
+        // Cleanup function
+        return () => {
+          clearTimeout(timeOut);
+        };
+      }, [autoPlay, current]);
+    
+      const slideRight = () => {
+        setCurrent((current) => (current === images.length - 1 ? 0 : current + 1));
+      };
+    
+      const slideLeft = () => {
+        setCurrent((current) => (current === 0 ? images.length - 1 : current - 1));
+      };
+    
     return (
         /* SET AUTOPLAY ON MOUSE ENTER put in the first div tag*/
         /*onMouseEnter={() => {setAutoPlay(false); clearTimeout(timeOut)}} onMouseLeave={() => {setAutoPlay(true);}}*/

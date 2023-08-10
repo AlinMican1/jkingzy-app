@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import './navBar.css'
 import Button from '../atom/button'
@@ -10,8 +9,22 @@ import ToggleNavBar from './toggleNavBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars  } from '@fortawesome/free-solid-svg-icons';
 import {useWindowSize} from '../../../lib/SizeScreen-hook';
+import WelcomeBox from './welcomeBox'
+
 const NavBar = () => {
-  const [activeButton, setActiveButton] = useState('Home');
+  const [activeButton, setActiveButton] = useState(null);
+  const [openDropNav, setDropNav] = useState(false);
+  const [width, height] = useWindowSize();
+  
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Access localStorage only on the client side
+      const storedActiveButton = localStorage.getItem('activeButton');
+      setActiveButton(storedActiveButton || 'Home');
+    }
+  }, []);
+  
   useEffect(() => {
     const headerElement = document.querySelector('header');
     
@@ -32,18 +45,39 @@ const NavBar = () => {
      
     };
   }, []); 
+  
   const handleButtonClick = (buttonText) => {
     setActiveButton(buttonText);
+    setDropNav(false);
+    localStorage.setItem('activeButton', buttonText);
   };
-  const [openDropNav, setDropNav] = useState(false);
-  const[width,height] = useWindowSize();
+
+  
+  
   useEffect(()=>{
+    
       if(width >= 901){
           setDropNav(false);
       }
-  },[width])
+  },[activeButton,width])
+  useEffect(() => {
+    if (openDropNav) {
+      document.documentElement.classList.add('no-scroll');
+      document.body.classList.add('no-scroll');
+    } else {
+      document.documentElement.classList.remove('no-scroll');
+      document.body.classList.remove('no-scroll');
+    }
+  }, [openDropNav]);
+    
+    
+ 
     return (
+      
+      
     <header >
+        
+            
         
        
         <div className='inner-flex'>
@@ -52,14 +86,17 @@ const NavBar = () => {
           </Link>
           
         <nav>
-        
         <div>
             <Button btnVariant={'hamburger-icon'} btnIcon={<FontAwesomeIcon icon={faBars} />} onClick={() => setDropNav(!openDropNav)} />
-            {openDropNav && <ToggleNavBar />}
-        </div>
+            {openDropNav && <ToggleNavBar  openDropNav={openDropNav}
+              setDropNav={setDropNav}
+              activeButton={activeButton}
+              handleButtonClick={handleButtonClick}/>}
+          </div>
+  
             <div className='button-toggle'>
             <Link href="/" className='active'> 
-            <Button btnText={'Home'} btnVariant={activeButton === 'Home' ? 'default active' : 'default'}  onClick={() => handleButtonClick('Home')}/>
+            <Button btnText={'Home'} btnVariant={activeButton === 'Home' ? 'default active' : 'default'}  onClick={() =>   handleButtonClick('Home')}/>
             </Link>
             <Link href="/about" className='active'> 
             <Button btnText={'About'} btnVariant={activeButton === 'About' ? 'default active' : 'default'}  onClick={() => handleButtonClick('About')}/>
@@ -76,8 +113,9 @@ const NavBar = () => {
             </div>
         </nav>
         </div>
+        
     </header>
-
+    
   
   )
 }
