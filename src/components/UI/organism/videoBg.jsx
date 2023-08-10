@@ -13,7 +13,7 @@ const VideoBg = () => {
   return (
     <div className='video-container'>
               
-            <video  src={trailer} autoPlay loop muted type="video/mp4"/>
+            <video  src={"https://archive.org/download/Popeye_forPresident/Popeye_forPresident_512kb.mp4"} autoPlay loop muted type="video/mp4"/>
             
             <div className='video-overlay' />
             
