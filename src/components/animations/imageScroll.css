@@ -14,7 +14,8 @@
     top: 50%; transform: translate(0%,-50%);
     user-select: none;
     margin-top: 100px;
-    background-color: #121718;
+    background-color: #30535b00;
+    
 }
 
 #images-track2{
@@ -25,7 +26,7 @@
     top: 50%; transform: translate(0%,-50%);
     user-select: none;
     margin-top: 100px;
-    background-color: #121718;
+    background-color: #12171800;
 }
 
 .image-inside-track{
