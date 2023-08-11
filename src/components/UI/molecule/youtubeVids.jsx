@@ -1,11 +1,7 @@
 'use client'
 import { useEffect, useState } from "react"
 import './youtubeVids.css'
-
 import Link from "next/link"
-import {motion} from "framer-motion"
-
-
 const MaxResult = 5
 var fetchURL = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${process.env.NEXT_PUBLIC_CHANNEL_ID}&maxResults=${MaxResult}&order=date&key=${process.env.NEXT_PUBLIC_YOUTUBE_API}`
 

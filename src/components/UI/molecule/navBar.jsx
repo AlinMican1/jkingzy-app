@@ -9,7 +9,7 @@ import ToggleNavBar from './toggleNavBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars  } from '@fortawesome/free-solid-svg-icons';
 import {useWindowSize} from '../../../lib/SizeScreen-hook';
-import WelcomeBox from './welcomeBox'
+
 
 const NavBar = () => {
   const [activeButton, setActiveButton] = useState(null);

@@ -65,10 +65,10 @@
 }
 .card-description-box{
     margin-left: 15vw;
-    max-width: 40vw; /* Adjust this value to control the maximum width of the box */
+    max-width: 40vw; 
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
-    word-wrap: break-word; /* Allow the text to wrap to the next line if it exceeds the width */
+    word-wrap: break-word; 
     overflow-wrap: break-word;
     backdrop-filter: blur(5px);
     background-color: rgba(255,255,255,0.1);

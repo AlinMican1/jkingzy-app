@@ -43,16 +43,6 @@
     font-size: 21px;
   }
 
-  /* @media (max-width: 1170px) {
-    legend {
-        font-size: 2.5em;
-       
-      }
-      fieldset .text p {
-        
-        font-size: 15px;
-      }
-} */
 
 @media (min-width:1284px) and (max-width:1604px) {
       fieldset .text p {

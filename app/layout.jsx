@@ -4,11 +4,10 @@ import NavBar from '../src/components/UI/molecule/navBar'
 import {useEffect, useRef, Suspense  } from 'react';
 import Loading from './loading';
 import Footer from '../src/components/UI/atom/footer'
-import { Poppins } from '@next/font/google'
+import { Roboto } from '@next/font/google'
 
-const poppins = Poppins({
-  weight: [ '100','200','300' ,'500' ,'600' ],
-
+const poppins = Roboto({
+  weight: ["100","300","400","500","700","900"],
   subsets: ['latin'],
   display: 'swap',
 })

@@ -8,7 +8,6 @@ export const ImageScroll = ({imagesSwipe, scrollId}) => {
     const trackRef = useRef(null);
 
   useEffect(() => {
-    //const track = document.getElementById("images-track");
     const track = trackRef.current;
     const handleMouseDown = (e) => {
       track.dataset.mouseDownAt = e.clientX || e.touches[0].clientX;
