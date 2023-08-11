@@ -21,7 +21,8 @@
     margin-top: -10px;
     padding-left: 30vw;
     padding-right: 30vw;
-    font-family: 'Poppins';
+    /* font-family: 'Poppins'; */
+    font-weight: 600;
 } 
 .find-out-box{
     background-color: rgba(39, 224, 45, 0);
