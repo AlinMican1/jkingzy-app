@@ -173,11 +173,11 @@ border-radius: 6px;
     /* font-family: 'Poppins', sans-serif; */
     opacity: 1;
     text-transform: uppercase;
-   
     padding-top: 10px;
     margin-right: -50px;
     display: none;
     transition: .2s;
+    margin-right: -80px;
 }
 .hamburger-icon:hover{
     color: #00A8D0;
