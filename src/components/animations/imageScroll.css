@@ -41,14 +41,14 @@
 .start-scroll{
     color: #B4A5C8;
     text-orientation: sideways; 
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     writing-mode: vertical-lr; 
     transform: rotate(180deg);
 }
 .ending-scroll{
     color: #B4A5C8;
     text-orientation: sideways; 
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     writing-mode: vertical-rl; 
     
 }

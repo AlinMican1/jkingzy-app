@@ -144,7 +144,7 @@ height:auto;
   left: 0;
   display: flex;
   position: relative;
-  font-family: 'Poppins'; 
+  /* font-family: 'Poppins';  */
   
 }
 
@@ -264,7 +264,7 @@ height:auto;
   left: 0;
   display: flex;
   position: relative;
-  font-family: 'Poppins'; 
+  /* font-family: 'Poppins';  */
   margin-top: -30px;
 }
 
@@ -353,7 +353,7 @@ body {
 
 
 h1{
-  font-family: 'Poppins';
+  /* font-family: 'Poppins'; */
   font-size: 70px;
   text-align: center;
   color: #fff;
@@ -397,7 +397,7 @@ p{
     display: flex;
     position: relative;
     justify-content: center;
-    font-family: 'Poppins'; 
+    /* font-family: 'Poppins';  */
   }
   .gallery-title:before, .gallery-page:after {
     display: none;

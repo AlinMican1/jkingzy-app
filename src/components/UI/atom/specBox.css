@@ -19,7 +19,7 @@
   legend {
     font-size: 3.4em;
     font-weight: 700;
-    font-family: 'Poppins';
+    /* font-family: 'Poppins'; */
   }
   legend span,
   fieldset .text {

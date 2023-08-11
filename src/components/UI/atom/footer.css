@@ -8,7 +8,7 @@ footer {
     box-sizing: border-box;
     border: none;
     outline: none;
-    font-family: 'Poppins';
+    /* font-family: 'Poppins'; */
   }
   .row {
     padding:1em 1em;

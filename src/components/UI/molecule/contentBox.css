@@ -33,7 +33,7 @@
 .default-box h1{
     font-size: 45px;
     color: rgb(255, 255, 255);
-    font-family: 'Poppins';  
+    /* font-family: 'Poppins';   */
     margin-top: -20px;
 }
 
