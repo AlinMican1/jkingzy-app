@@ -55,14 +55,15 @@
 
 
   @media screen and (max-width: 400px) {
-    #images-track{
+   
+    /* #images-track{
         margin-top: 25px;
         
-    }
-    #images-track2{
-        margin-top: 25px;
+    } */
+    /* #images-track2{
+        margin-top: 200px;
         
-    }
+    } */
     #images-track p{
         font-size: 20px;
         
@@ -71,7 +72,27 @@
         font-size: 20px;
         
     }
+    .image-inside-track{
+        width: 50vmin;
+        height: 68vmin;
+        object-fit: cover;
+        object-position: 100% 50%;
+        border-radius: 6px;
+        margin-top: -120px;
     
+    }
+    #images-track{
+        
+        width: 550vw;
+    }
+    #images-track2{
+        
+        width: 550vw;
+    }
+    .ending-scroll{
+       
+        margin-top: -120px;
+    }
   }
 
   @media screen and (max-width: 500px) and (min-width:400px)  {
@@ -91,7 +112,23 @@
         font-size: 20px;
         
     }
+    #images-track{
+        
+        width: 550vw;
+    }
+    #images-track2{
+        
+        width: 550vw;
+    }
+    .image-inside-track{
+        width: 50vmin;
+        height: 60vmin;
+        object-fit: cover;
+        object-position: 100% 50%;
+        border-radius: 6px;
+        
     
+    }
   }
 
   @media screen and (max-width: 600px) and (min-width:500px)  {
@@ -110,6 +147,23 @@
     #images-track2 p{
         font-size: 20px;
         
+    }
+    .image-inside-track{
+        width: 50vmin;
+        height: 60vmin;
+        object-fit: cover;
+        object-position: 100% 50%;
+        border-radius: 6px;
+        
+    
+    }
+    #images-track{
+        
+        width: 540vw;
+    }
+    #images-track2{
+        
+        width: 540vw;
     }
     
   }
@@ -130,7 +184,14 @@
         font-size: 20px;
         
     }
-    
+    #images-track{
+        
+        width: 540vw;
+    }
+    #images-track2{
+        
+        width: 540vw;
+    }
   }
 
   @media screen and (max-width: 800px) and (min-width:700px)  {
@@ -150,6 +211,14 @@
         font-size: 20px;
         
     }
+    #images-track{
+        
+        width: 537vw;
+    }
+    #images-track2{
+        
+        width: 537vw;
+    }
     
   }
   @media screen and (max-width: 950px) and (min-width:800px)  {
@@ -160,6 +229,28 @@
     #images-track2{
         margin-top: 40px;
         
+    }
+    #images-track{
+        
+        width: 450vw;
+    }
+    #images-track2{
+        
+        width: 450vw;
+    }
+    
+    
+  }
+
+  @media screen and (min-width:950px) and (max-width: 1200px)   {
+   
+    #images-track{
+        
+        width: 320vw;
+    }
+    #images-track2{
+        
+        width: 320vw;
     }
     
     

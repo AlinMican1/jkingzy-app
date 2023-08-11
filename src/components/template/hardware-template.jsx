@@ -35,9 +35,11 @@ const SpecsPage = () => {
   ,'Monitor: MSD Optix MAG241C', '2nd Monitor: Samsung C24F390FHR', 'Mouse: Razer DeathAdder Essential', 'Pedals:T.Flight Rudder', 'Joystick and Throttle: Thrustmaster T16000M FCS Hotas' 
   ,'Headeset: Logitech G PRO X Gaming-Headset']
 
-  const NvidiaSettings = ['Speed: 37%', 'Intensity: 50%','Invert Z:Y Axis Depth?: Yes (Z): No (X)', 'Tint Colour: 34%' ,'Tint Intensity: 11%' , 'Temperature: 0.5'
-  ,'Vibrance: 12.6', 'Sharpen & Clarity: 0% & 45%', 'HDR Toning: 33%', 'Bloom: 7%' 
-  ,'Exposure & Contrast: -5% & 15%' , 'Highlights & Shadows: 31% & 43%' ,'Gamma: 0%']
+  const NvidiaSettings = [ 'Auto Depth of field: Speed (37%) , Intensity (50%) , Invert Z/X Axis Depth? Yes (Z): No (X)',
+  'Colour: Tint Colour (34%) ,Tint Intensity (11%) , Temperature (0.5) ,Vibrance (12.6) ',
+  'Details: Sharpen & Clarity (0% & 45%), HDR Toning (33%), Bloom (7%)' , 
+  'Brightness/Contrast: Exposure (-5%) , Contrast (15%), Highlights (31%) , Shadows (43%) , Gamma (0%)' 
+ ]
   
   return ( 
     
