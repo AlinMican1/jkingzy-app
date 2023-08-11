@@ -100,7 +100,7 @@
   font-size: 25px;
   position: relative;
   text-align: center;
-  
+  font-weight: 600;
   color: #00A8D0;
 }
 
@@ -151,7 +151,7 @@ height:auto;
 .span-title-gallery{
   color: #00A8D0;
   white-space: pre;
-  
+  font-weight: 600;
  
 }
 
@@ -308,6 +308,7 @@ height:auto;
 .video-footer p{
   margin: auto;
   font-size: 25px;
+  font-weight: 600;
 }
 .custom-fiverr-link{
   color: #00db37;

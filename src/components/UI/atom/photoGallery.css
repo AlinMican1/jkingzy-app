@@ -48,7 +48,7 @@
 .photo-gallery-title{
     display: flex;
     justify-content: center;
-   
+    font-weight: 600;
     text-align: center;
 }
 .socials-icon-insta{
@@ -64,6 +64,7 @@
 .span-title{
     color: #00A8D0;
     white-space: pre;
+    font-weight: 600;
 }
 
 #lightbox{

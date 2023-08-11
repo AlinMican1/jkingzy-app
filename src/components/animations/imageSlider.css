@@ -78,6 +78,7 @@
     box-shadow: 0 5px 25px rgba(0, 0, 0 / 20%);
     text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     padding-top: 3px;
+    font-weight: 600;
 
 }
 .card-description{
