@@ -19,10 +19,13 @@
 .youtube-container iframe {
    /* Extend it beyond the viewport... */
     width: 300%;
-    height: 100vh;
+    height: 112vh;
+    
+    
    /* ...and bring it back again */
     margin-left: -100%;
-    object-fit: contain;
+    
+   
 }
 .video-container-fade{
     z-index: 100;
@@ -40,7 +43,7 @@
     height: 100vh;
     object-fit: cover;
     opacity: 1;
-/* } */
+} */
 
 
 .video-title{
@@ -116,3 +119,46 @@
         
     } 
 } 
+@media (max-width:550px){
+    .youtube-container iframe {
+        /* Extend it beyond the viewport... */
+         width: 300%;
+         height: 100vh;
+         
+         
+        /* ...and bring it back again */
+         margin-left: -100%;
+         
+        
+     }
+     .video-title{
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+    } 
+}
+
+@media (max-width:520px){
+    .youtube-container iframe {
+        /* Extend it beyond the viewport... */
+         width: 400%;
+         height: 100vh;
+         
+         
+        /* ...and bring it back again */
+         margin-left: -150%;
+         
+        
+     }
+     .video-title{
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+    } 
+    .youtube-container {
+        overflow: hidden;
+        width: 100%;
+        
+        
+    }
+}

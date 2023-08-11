@@ -4,8 +4,6 @@ import Parallax from '../../src/components/animations/parallax'
 import background from '../../src/assets/work_background.jpg'
 import transparent from '../../src/assets/transparent.png'
 import Timeline from '../../src/components/UI/atom/timeline'
-import fiverr1 from '../../src/assets/fiver1T.mp4'
-import fiverr2 from '../../src/assets/fiverr2.mp4'
 import Plx from 'react-plx'
 import '../../styles/globals.css'
 import { motion } from 'framer-motion'
@@ -66,14 +64,14 @@ const Work = () => {
         </Plx>
         <motion.div initial={"offscreen"} whileInView={'onscreen'} viewport={{once:true}} variants={VideoAnimation} id='fiverr-videos'>
         <div>
-        <video className='fiverr-video-player'  style={{ border: '2px solid #00A8D0' }} controls>
-          <source src={fiverr1} type="video/mp4" />
-        </video>
+        <iframe src={'https://www.youtube.com/embed/b99LmwfjdhY?si=UTM69Yo0o7LyvCNV'} className='fiverr-video-player'  style={{ border: '2px solid #00A8D0' }} controls>
+         
+        </iframe>
         </div>
         <div>
-        <video className='fiverr-video-player'  style={{ border: '2px solid #00A8D0' }} controls>
-          <source src={fiverr2} type="video/mp4" />
-        </video>
+        <iframe src={'https://www.youtube.com/embed/mp1JVuqgRbM?si=xURW0854RDth-eoX'} className='fiverr-video-player'  style={{ border: '2px solid #00A8D0' }} controls>
+         
+        </iframe>
         </div>
         </motion.div>
         <div className='video-footer'>
