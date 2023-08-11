@@ -95,7 +95,7 @@ export const ImageScroll = ({ imagesSwipe, scrollId }) => {
       const isPhone = window.innerWidth <= 768; // Adjust this threshold as needed
 
       if (isPhone) {
-        maxDelta = window.innerWidth * 2; // Less sensitivity on phones
+        maxDelta = window.innerWidth; // Less sensitivity on phones
       }else {
         maxDelta = window.innerWidth / 2; // Reset for desktop
       }
