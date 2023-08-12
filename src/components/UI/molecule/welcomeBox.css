@@ -74,6 +74,9 @@
         padding-right: 15vw;
         
     } 
+    .video-container-fade{
+        display: none;
+    }
 } 
 
 @media (max-width:480px){

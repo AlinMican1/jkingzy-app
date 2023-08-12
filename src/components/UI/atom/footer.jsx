@@ -21,7 +21,7 @@ const Footer = () => {
   <h3>TheKingzAce</h3>
 
    <p>
-      "You must develp personal contacts if you want to be successful." -Armstrong Williams
+      "You must develop personal contacts if you want to be successful." -Armstrong Williams
   </p>
 
   <div className="social">
