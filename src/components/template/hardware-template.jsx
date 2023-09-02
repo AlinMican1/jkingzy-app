@@ -33,7 +33,7 @@ const SpecsPage = () => {
   
   const PeripheralsSpecs = ['Camera: Sony AX53 4K Camcorder', 'Microphone: RODE VideoMIC GO', 'Action Cam: GoPro Hero 9', 'Video Editing Software: DaVinci Resolve 18'
   ,'Monitor: MSD Optix MAG241C', '2nd Monitor: Samsung C24F390FHR', 'Mouse: Razer DeathAdder Essential', 'Pedals:T.Flight Rudder', 'Joystick and Throttle: Thrustmaster T16000M FCS Hotas' 
-  ,'Headeset: Logitech G PRO X Gaming-Headset']
+  ,'Headeset: Logitech G PRO X Gaming-Headset' , 'Thrustmaster: TCA Yoke Boeing Edition / TCA Throttle Quadrant Boeing Edition' ]
 
   const NvidiaSettings = [ 'Auto Depth of field: Speed (37%) , Intensity (50%) , Invert Z/X Axis Depth? Yes (Z): No (X)',
   'Colour: Tint Colour (34%) ,Tint Intensity (11%) , Temperature (0.5) ,Vibrance (12.6) ',
