@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React, { useLayoutEffect , useEffect, useRef } from 'react'
 import {motion, Variants} from 'framer-motion'
 import './aboutBox.css'
-
+//About
 const AboutBox = () => {
     const AnimateText ={
         offscreen: {y:100},
